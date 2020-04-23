@@ -19,7 +19,7 @@ typedef enum Boolean {
 
 /**
  * 1. 사용자로부터 반지름의 길이를 입력 받아 원의 넓이를 계산하여 출력하는 프로그램을 작성하라.
- * π로 수렴하는 무한급수인 Bailey-Borwein-Plouffe 공식을 이용하여 PI를 계산한다
+ * π로 수렴하는 무한급수인 Bailey-Borwein-Plouffe 공식을 이용하여 PI를 계산한다.
  * https://en.wikipedia.org/wiki/Bailey-Borwein-Plouffe_formula
  */
 long double powByInteger(long double p, int n);
