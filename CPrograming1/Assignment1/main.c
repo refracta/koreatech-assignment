@@ -12,12 +12,6 @@ typedef enum Boolean {
 };
 
 /**
- * 개인적인 도전 과제:
- * 1. math.h 없이
- * 2. 주어진 것보다 Hardcore 하게
- * */
-
-/**
  * 1. 사용자로부터 반지름의 길이를 입력 받아 원의 넓이를 계산하여 출력하는 프로그램을 작성하라.
  * π로 수렴하는 무한급수인 Bailey-Borwein-Plouffe 공식을 이용하여 PI를 계산한다.
  * https://en.wikipedia.org/wiki/Bailey-Borwein-Plouffe_formula
