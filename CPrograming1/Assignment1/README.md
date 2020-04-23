@@ -8,3 +8,4 @@
 5. 피타고라스 정리를 이용해 두 직각변의 길이를 사용자로부터 입력 받아 빗변의 길이를 계산해 출력하는 프로그램을 작성하라.
 ```
 Tested on CLion + WSL (GCC, C99)
+Run Result: https://github.com/refracta/koreatech-assignment/blob/master/CPrograming1/Assignment1/RESULT.pdf
