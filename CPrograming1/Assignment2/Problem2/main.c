@@ -90,11 +90,11 @@ double getUSD2KRWExchangeRate() {
     }
 }
 
+const float ASSIGNMENT_EXCHANGE_RATE = 1234.5;
+
 /**
  * 2. 달러($)를 입력하면 원(\) 으로 얼마인지 알려주는 프로그램을 작성하라. 환율은 1$ 당 1234.5\ 이라고 가정한다. 모든 변수는 float형으로 입력한다.
  */
-const float ASSIGNMENT_EXCHANGE_RATE = 1234.5;
-
 void runAssignment2() {
     float dollar;
     double rate = getUSD2KRWExchangeRate();
