@@ -134,4 +134,4 @@ int main() {
 output.pdf 참조
 
 # 해설
-solve.c 참조
+solve.c 참조 (발표 후 업로드 예정)
