@@ -9,7 +9,7 @@ const float ASSIGNMENT_FORM_PI = (int) (M_PI * 100) / 100.0;
 
 void runAssignment1() {
     float centralAngle, radius;
-    printf("중심각(°)과 지름을 입력하시오:");
+    printf("중심각(°)과 반지름을 입력하시오:");
     scanf("%f %f", &centralAngle, &radius);
     printf("부채꼴의 넓이는 %f입니다.", 1.0 / 2 * (radius * radius) * (centralAngle / 180 * ASSIGNMENT_FORM_PI));
 }

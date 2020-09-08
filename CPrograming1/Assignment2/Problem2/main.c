@@ -17,7 +17,7 @@ struct URLData {
 };
 
 /**
- * libcurl의 callback 함수를 정의합니다.
+ * libcurl의 callback 함수를 정의한다.
  * https://curl.haxx.se/libcurl/c/CURLOPT_WRITEFUNCTION.html
  */
 size_t write_callback(void *ptr, size_t size, size_t nmemb, struct URLData *data) {
@@ -35,7 +35,7 @@ size_t write_callback(void *ptr, size_t size, size_t nmemb, struct URLData *data
 }
 
 /**
- * 매개변수의 URL에 Http Get 요청시 응답하는 값을 가져옵니다.
+ * 매개변수의 URL에 Http Get 요청시 응답하는 값을 가져온다.
  * @param url Http Get 요청할 URL
  * @return 응답된 body String
  */
@@ -65,7 +65,7 @@ const char *START_STRING = "{\"KRW\":";
 const char *END_STRING = "}";
 
 /**
- * 유럽 중앙은행이 제공하는 USD-KRW 환율 정보를 API를 통해 가져옵니다.
+ * 유럽 중앙은행이 제공하는 USD-KRW 환율 정보를 API를 통해 가져온다.
  * https://exchangeratesapi.io/
  * @param json API에서 반환된 JSON String
  * @return 1USD에 해당하는 KRW의 가치

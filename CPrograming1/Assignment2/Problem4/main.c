@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * 정수의 문자열 자릿수를 계산합니다.
+ * 정수의 문자열 자릿수를 계산한다.
  * @param integer
  * @return 정수의 문자열 자릿수
  */
@@ -19,7 +19,7 @@ int getIntegerStringLength(int integer) {
 }
 
 /**
- * 가변적인 실행 환경에서 한글 한 문자([가-힣])가 차지하는 길이를 가져옵니다.
+ * 가변적인 실행 환경에서 한글 한 문자([가-힣])가 차지하는 길이를 가져온다.
  * @return 한글 한 문자의 길이
  */
 int getHangulSize() {
@@ -30,7 +30,7 @@ int getHangulSize() {
 const char *ZERO_SECONDS_STR = "0초";
 
 /**
- * 총 시간의 초 환산값을 "${Hours}시간 ${Minutes}분 ${Seconds}초" 꼴의 문자열로 반환합니다. 동적 할당된 포인터가 반환되고 해당 포인터는 해제가 필요합니다.
+ * 총 시간의 초 환산값을 "${Hours}시간 ${Minutes}분 ${Seconds}초" 꼴의 문자열로 반환한다. 주의: 동적 할당된 포인터가 반환됨!
  * @param totalSeconds 총 시간의 초 환산값
  * @return "${Hours}시간 ${Minutes}분 ${Seconds}초"
  */
