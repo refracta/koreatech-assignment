@@ -1,4 +1,4 @@
-# 문제 [PPT 바로가기](https://docs.google.com/presentation/d/e/2PACX-1vSRqDTt6DdDhc0iCUxOtus4WyGY1W843peYzcvgTlROoQD41EhVIsYwpvlta5iP_tYLuMPc9wkACEAz/pub?start=false&loop=false&delayms=3000&slide=id.g9560dc4242_3_0)
+# 문제 [(PPT 바로가기)](https://docs.google.com/presentation/d/e/2PACX-1vSRqDTt6DdDhc0iCUxOtus4WyGY1W843peYzcvgTlROoQD41EhVIsYwpvlta5iP_tYLuMPc9wkACEAz/pub?start=false&loop=false&delayms=3000&slide=id.g9560dc4242_3_0)
 당신은 C프로그래밍II 과목 수강에 사용 할 컴퓨터를 구입하러 용산 지하상가에 들어왔습니다.
 어찌저찌 컴퓨터는 구입하는데 성공했지만 지하상가가 너무 번잡한 나머지 자신의 위치와 출구가 어디인지 알 수 없게 되어버렸습니다.
 당신은 구입한 컴퓨터를 켜고 프로그래밍을 통해 나갈 방법을 궁리하기 시작했습니다.
