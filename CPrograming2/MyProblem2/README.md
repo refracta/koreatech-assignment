@@ -120,7 +120,7 @@ P.....
 P 격자칸은 죽은 세포 상태이며 #으로 표기되지 않은 나머지 모든 격자칸은 죽은 세포 상태입니다.
 
 ## TIP-0. 초기화 예시 코드
-```
+```C
 const int GRID_WIDTH = 40;
 const int GRID_HEIGHT = 40;
 char grid[40][40];
