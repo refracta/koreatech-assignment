@@ -129,6 +129,7 @@ for (int y = 0; y < GRID_HEIGHT; y++) {
         grid[x][y] = '.';
     }
 }
+
 grid[20][20] = '#';
 grid[20 + 1][20] = '#';
 grid[20 + 2][20] = '#';
