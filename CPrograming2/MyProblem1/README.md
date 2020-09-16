@@ -39,7 +39,7 @@ MOVE_RIGHT
 ## 문제 (problem.c)
 아래의 코드에서 프로그램이 끝날 수 있도록 위의 함수를 구현하세요.
 
-```
+```C
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
