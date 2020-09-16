@@ -135,4 +135,4 @@ int main() {
 output.pdf 참조
 
 ## 해설
-[solve.c 참](https://github.com/refracta/koreatech-assignment/blob/master/CPrograming2/MyProblem1/solve.c)
+[solve.c 참조](https://github.com/refracta/koreatech-assignment/blob/master/CPrograming2/MyProblem1/solve.c)
