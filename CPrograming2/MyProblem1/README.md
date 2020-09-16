@@ -117,7 +117,7 @@ int main() {
     }
     
 	// <용산 지하상가 그리기>
-    printf("End Turn: %d\n", turn++);
+    printf("End Turn: %d\n", turn);
     printf("용산 지하상가에서 탈출했습니다.");
 }
 ```
