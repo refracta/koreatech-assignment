@@ -42,6 +42,8 @@ r = 검은색 룩
 n = 검은색 나이트
 b = 검은색 비숍
 p = 검은색 폰
+
+. = 빈 공간
 ```
 > 체스판은 적당히 직접 구성하여도 괜찮고 [랜덤 체스판 생성기](http://bernd.bplaced.net/fengenerator/fengenerator.html)를 이용하여도 됩니다.
 
