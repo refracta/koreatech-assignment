@@ -31,14 +31,14 @@ doxygen: 문제에 대한 Doxygen HTML Document 수록
 
 ## 실행 결과 캡쳐
 ### Problem2	Lab1-2. 로또 당첨 여부 (팀4)
-![Problem2](./report/capture/Problem2.png)
+![Problem2](../report/capture/Problem2.png)
 ### Problem3	Lab1-3. 이진수 변환 (김영우 조교)
-![Problem3](./report/capture/Problem3.png)
+![Problem3](../report/capture/Problem3.png)
 ### Problem4	Lab1-4. 구분구적법 (이재홍 조교)
-![Problem4](./report/capture/Problem4.png)
-![Problem4-Mathematica](./report/capture/Problem4-Mathematica.png)
+![Problem4](../report/capture/Problem4.png)
+![Problem4-Mathematica](../report/capture/Problem4-Mathematica.png)
 ### Problem5	Lab1-5. 정수 하나에 캐릭터 정보 담기 (김덕수 교수)
-![Problem5](./report/capture/Problem5.png)
+![Problem5](../report/capture/Problem5.png)
 
 ## 소감
 정수 하나에 캐릭터 정보 담기가 제일 재미있었습니다.
