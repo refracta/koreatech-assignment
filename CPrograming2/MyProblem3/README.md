@@ -21,9 +21,9 @@
 
 수학에서는 이런 종류의 평가 함수를 가중 선형 함수라고 부르는데 아래 식과 같이 표현할 수 있습니다.
 
-<img src="https://render.githubusercontent.com/render/math?math=\displaystyle%20Eval(x)%20%3D%20w_1f_1(s)%20%2B%20w_2f_2(s)%20%2B%20\cdots%20%2B%20w_nf_n(s)%20%3D%20\sum_%7Bi%3D1%7D%5E%7Bn%7Dw_if_i(s)">
+<img src="https://render.githubusercontent.com/render/math?math=\displaystyle%20Eval(s)%20%3D%20w_1f_1(s)%20%2B%20w_2f_2(s)%20%2B%20\cdots%20%2B%20w_nf_n(s)%20%3D%20\sum_%7Bi%3D1%7D%5E%7Bn%7Dw_if_i(s)">
 
-여기서 w_i는 가중치(특정한 기물의 가치)이고 각 f_i는 주어진 국면의 한 자질(특정한 기물의 개수)입니다.
+여기서 s는 평가의 대상(체스판) w_i는 가중치(특정한 기물의 가치)이고 각 f_i는 주어진 국면의 한 자질(특정한 기물의 개수)입니다.
 
 ## 문제
 가중 선형 함수를 이용하여 char형 2차원 배열로 이루어진 체스판을 평가하는 평가 함수를 만들고 어느 색깔이 유리한지 출력하세요. (킹은 가치를 측정할 수 없으므로 기물 가치를 계산하지 않습니다)

@@ -1,47 +1,43 @@
-# Assignment1 # {#mainpage}
+# Assignment1
 
-## ¹®Á¦
+## ë¬¸ì œ
 ```
-<º»ÀÎ ÃâÁ¦ ¹®Á¦·Î Ç®Áö ¾ÊÀ½>  Lab1-1. ¿ë»ê ÀüÀÚ»ó°¡ (ÆÀ1)
-Problem2	Lab1-2. ·Î¶Ç ´çÃ· ¿©ºÎ (ÆÀ4)
-Problem3	Lab1-3. ÀÌÁø¼ö º¯È¯ (±è¿µ¿ì Á¶±³)
-Problem4	Lab1-4. ±¸ºÐ±¸Àû¹ý (ÀÌÀçÈ« Á¶±³)
-Problem5	Lab1-5. Á¤¼ö ÇÏ³ª¿¡ Ä³¸¯ÅÍ Á¤º¸ ´ã±â (±è´ö¼ö ±³¼ö)
+Problem2	Lab1-2. ë¡œë˜ ë‹¹ì²¨ ì—¬ë¶€ (íŒ€4)
+Problem3	Lab1-3. ì´ì§„ìˆ˜ ë³€í™˜ (ê¹€ì˜ìš° ì¡°êµ)
+Problem4	Lab1-4. êµ¬ë¶„êµ¬ì ë²• (ì´ìž¬í™ ì¡°êµ)
+Problem5	Lab1-5. ì •ìˆ˜ í•˜ë‚˜ì— ìºë¦­í„° ì •ë³´ ë‹´ê¸° (ê¹€ë•ìˆ˜ êµìˆ˜)
 ```
 
-## °³¹ß ¹× ÄÄÆÄÀÏ È¯°æ
-Windows Server 2019 + CLion + WSL(Ubuntu 18.04) + C99¿¡¼­ ÀÛ¾÷µÇ¾ú°í GCC¸¦ ÅëÇØ i686-w64-mingw32·Î À©µµ¿ì¿ë ¹ÙÀÌ³Ê¸®¸¦ Å©·Î½º ÄÄÆÄÀÏÇÏ¿´½À´Ï´Ù.
+## ê°œë°œ ë° ì»´íŒŒì¼ í™˜ê²½
+Windows Server 2019 + CLion + WSL(Ubuntu 18.04) + C99ì—ì„œ ìž‘ì—…ë˜ì—ˆê³  GCCë¥¼ í†µí•´ i686-w64-mingw32ë¡œ ìœˆë„ìš°ìš© ë°”ì´ë„ˆë¦¬ë¥¼ í¬ë¡œìŠ¤ ì»´íŒŒì¼í•˜ì˜€ìŠµë‹ˆë‹¤.
 
-ÇÁ·ÎÁ§Æ® ÆÄÀÏÀº ÇÑ±Û Ãâ·Â È£È¯À» À§ÇØ CP949·Î ÀÎÄÚµùµÇ¾ú½À´Ï´Ù.
+í”„ë¡œì íŠ¸ íŒŒì¼ì€ í•œê¸€ ì¶œë ¥ í˜¸í™˜ì„ ìœ„í•´ CP949ë¡œ ì¸ì½”ë”©ë˜ì—ˆìŠµë‹ˆë‹¤.
 
-## ºôµå ¹æ¹ý (Ubuntu 18.04)
+## ë¹Œë“œ ë°©ë²• (Ubuntu 18.04)
 ```
 apt-get install mingw-w64
 cmake CMakeLists.txt
 make
 ```
 
-## ±¸Á¶
+## êµ¬ì¡°
 ```
-src: ¹®Á¦ ¼Ò½º ÄÚµå ¼ö·Ï
-bin: Å©·Î½º ÄÄÆÄÀÏµÈ À©µµ¿ì¿ë ¹ÙÀÌ³Ê¸® ¼ö·Ï
-report: CodeCollection, Report, Capture ¼ö·Ï
-doxygen: ¹®Á¦¿¡ ´ëÇÑ Doxygen HTML Document ¼ö·Ï
+src: ë¬¸ì œ ì†ŒìŠ¤ ì½”ë“œ ìˆ˜ë¡
+bin: í¬ë¡œìŠ¤ ì»´íŒŒì¼ëœ ìœˆë„ìš°ìš© ë°”ì´ë„ˆë¦¬ ìˆ˜ë¡
+report: CodeCollection, Report, Capture ìˆ˜ë¡
+doxygen: ë¬¸ì œì— ëŒ€í•œ Doxygen HTML Document ìˆ˜ë¡
 ```
 
-## ½ÇÇà °á°ú Ä¸ÃÄ
-### Problem2	Lab1-2. ·Î¶Ç ´çÃ· ¿©ºÎ (ÆÀ4)
+## ì‹¤í–‰ ê²°ê³¼ ìº¡ì³
+### Problem2	Lab1-2. ë¡œë˜ ë‹¹ì²¨ ì—¬ë¶€ (íŒ€4)
 ![Problem2](./report/capture/Problem2.png)
-### Problem3	Lab1-3. ÀÌÁø¼ö º¯È¯ (±è¿µ¿ì Á¶±³)
+### Problem3	Lab1-3. ì´ì§„ìˆ˜ ë³€í™˜ (ê¹€ì˜ìš° ì¡°êµ)
 ![Problem3](./report/capture/Problem3.png)
-### Problem4	Lab1-4. ±¸ºÐ±¸Àû¹ý (ÀÌÀçÈ« Á¶±³)
+### Problem4	Lab1-4. êµ¬ë¶„êµ¬ì ë²• (ì´ìž¬í™ ì¡°êµ)
 ![Problem4](./report/capture/Problem4.png)
 ![Problem4-Mathematica](./report/capture/Problem4-Mathematica.png)
-### Problem5	Lab1-5. Á¤¼ö ÇÏ³ª¿¡ Ä³¸¯ÅÍ Á¤º¸ ´ã±â (±è´ö¼ö ±³¼ö)
+### Problem5	Lab1-5. ì •ìˆ˜ í•˜ë‚˜ì— ìºë¦­í„° ì •ë³´ ë‹´ê¸° (ê¹€ë•ìˆ˜ êµìˆ˜)
 ![Problem5](./report/capture/Problem5.png)
 
-## ¼Ò°¨
-Á¤¼ö ÇÏ³ª¿¡ Ä³¸¯ÅÍ Á¤º¸ ´ã±â°¡ Á¦ÀÏ Àç¹ÌÀÖ¾ú½À´Ï´Ù.
-
-## ±âÅ¸
+## ê¸°íƒ€
 [GitHub](https://github.com/refracta/koreatech-assignment/tree/master/CPrograming2)
