@@ -159,16 +159,16 @@ int eval_grid(char grid[GRID_SIZE][GRID_SIZE]) {
     // 주석을 해제하고 알맞게 구현하세요.
 }
 
-int generateGrid(char grid[GRID_SIZE][GRID_SIZE], char (*gridArray)[GRID_SIZE][GRID_SIZE], char target_symbol) {
+int generateGrid(char grid[GRID_SIZE][GRID_SIZE], char (*grid_array)[GRID_SIZE][GRID_SIZE], char target_symbol) {
     for (int x = 0; x < GRID_SIZE; x++) {
         for (int y = 0; y < GRID_SIZE; y++) {
             if (grid[x][y] == EMPTY_SYMBOL) {
-                // copy_grid(gridArray[?], grid);
+                // copy_grid(grid_array[?], grid);
                 // Your code
             }
         }
     }
-    // return <real size of gridArray>;
+    // return <real size of grid_array>;
 }
 
 char result_grid[GRID_SIZE][GRID_SIZE];
