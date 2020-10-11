@@ -64,7 +64,7 @@ Minimax Algorithm은
 
 소개한 알고리즘을 이용하여 틱택토 인공지능을 구현하세요!
 
-### [Wikipedia, Minimax - Pseudocode](https://en.wikipedia.org/wiki/Minimax)
+### [Minimax - Pseudocode, Wikipedia](https://en.wikipedia.org/wiki/Minimax)
 ```
 function minimax(node, depth, maximizingPlayer)
     if depth = 0 or node is a terminal node
