@@ -245,7 +245,7 @@ svn export https://github.com/refracta/koreatech-assignment/branches/master/CPro
 
 2. CPrograming2/MyProblem5을 원하는 위치로 이동
 
-3. MyProblem5를 APSimulator로 이름 변경
+3. MyProblem5를 TicTacToe로 이름 변경
 
 4. Visual Studio - 로컬 폴더 열기 또는 파일 - 열기 - CMake - TicTacToe/CMakeLists.txt
 
@@ -265,7 +265,7 @@ svn export https://github.com/refracta/koreatech-assignment/branches/master/CPro
 
 1. 압축 해제
 
-2. 본인의 프로젝트에 CPrograming2/MyProblem4 내부의 파일을 이동한 뒤 그대로 사용
+2. 본인의 프로젝트에 CPrograming2/MyProblem5 내부의 파일을 이동한 뒤 그대로 사용
 
 
 ### 빌드 (CMake)
