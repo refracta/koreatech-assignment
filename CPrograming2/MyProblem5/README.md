@@ -140,37 +140,41 @@ void run_tictactoe();
 
 int eval_grid(char grid[GRID_SIZE][GRID_SIZE]) {
     int grid_status = get_grid_status(grid);
+    /*
     switch (grid_status) {
         case AI_WIN:
-            return <?>;
+            // return <?>;
         case HUMAN_WIN:
-            return <?>;
+            // return <?>;
         case DRAW:
-            return <?>;
+            // return <?>;
         case NOT_FINISHED:
-            return <?>;
+            // return <?>;
         case UNKNOWN:
-            return <?>;
+            // return <?>;
     }
+    */
+    // 주석을 해제하고 알맞게 구현하세요.
 }
 
 int generateGrid(char grid[GRID_SIZE][GRID_SIZE], char (*gridArray)[GRID_SIZE][GRID_SIZE], char target_symbol) {
     for (int x = 0; x < GRID_SIZE; x++) {
         for (int y = 0; y < GRID_SIZE; y++) {
             if (grid[x][y] == EMPTY_SYMBOL) {
-                copy_grid(gridArray[?], grid);
+                // copy_grid(gridArray[?], grid);
                 // Your code
             }
         }
     }
-    return <real size of gridArray>;
+    // return <real size of gridArray>;
 }
 
 char result_grid[GRID_SIZE][GRID_SIZE];
 int minimax(char grid[GRID_SIZE][GRID_SIZE], int depth, int original_depth, int maximizing_player) {
-    if (depth == 0 || node_is_terminal_node) {
-        return eval_grid(grid);
-    }
+    //if (depth == 0 || node_is_terminal_node) {
+    //    return eval_grid(grid);
+    //}
+    // 주석을 해제하고 알맞게 구현하세요.
     char grid_array[GRID_SIZE * GRID_SIZE][GRID_SIZE][GRID_SIZE];
     int array_size = generateGrid(grid, grid_array, maximizing_player ? AI_SYMBOL : HUMAN_SYMBOL);
     int best_value;
@@ -179,6 +183,7 @@ int minimax(char grid[GRID_SIZE][GRID_SIZE], int depth, int original_depth, int 
     if (maximizing_player) {
         best_value = -INFINITY;
         for (int i = 0; i < array_size; i++) {
+            int val;
             // Your code
             if(is_root_node && val == best_value){
                 best_grid_index = i;
@@ -187,6 +192,7 @@ int minimax(char grid[GRID_SIZE][GRID_SIZE], int depth, int original_depth, int 
     } else {
         best_value = INFINITY;
         for (int i = 0; i < array_size; i++) {
+            int val;
             // Your code
             if(is_root_node && val == best_value){
                 best_grid_index = i;
@@ -208,7 +214,7 @@ void apply_ai_selection(char grid[GRID_SIZE][GRID_SIZE]) {
 int main() {
     init_ai(apply_ai_selection);
     // 인공지능의 행동 함수를 매개변수로 넘기면
-    
+
     run_tictactoe();
     // 이제 모든 것은 간이-틱택토 구현체가 알아서 합니다.
     // 항상 사람이 먼저 차례를 가지게 구현되었습니다.
