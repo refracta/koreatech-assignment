@@ -283,8 +283,11 @@ make
 ```
 > WARNING: main.c 파일은 CP949로 인코딩되었으니 Linux/Mac 사용자는 유의!
 
+## 프로그램의 목적
+배열, 포인터, 재귀함수 응용
+
 ## 프로그램의 기능
-배열, 포인터, 재귀함수와 Minimax Algorithm을 이용한 틱택토 인공지능 시뮬레이션 
+Minimax Algorithm(or Alpha-Beta Pruning)을 이용한 틱택토 인공지능 시뮬레이션
 
 ## 입력 & 출력 양식 (실행 예시)
 ```
