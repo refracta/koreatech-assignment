@@ -1,4 +1,4 @@
-﻿# Assignment3 # {#mainpage}
+# Assignment3
 
 ## 문제
 ```
