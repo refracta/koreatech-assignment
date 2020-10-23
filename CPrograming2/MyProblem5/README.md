@@ -136,7 +136,7 @@ void run_tictactoe();
 // 간이-틱택토 구현체 코드를 시작합니다.
 ```
 
-### Baseline code (tictactoe.c)
+### Baseline code (main.c)
 ```C
 #include "tictactoe.h"
 
