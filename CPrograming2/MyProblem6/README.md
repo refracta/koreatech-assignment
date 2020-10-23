@@ -64,6 +64,7 @@ int main() {
     // = {'S', 'c', 'h', ..., 'i', 'e', 's'}; (윗줄과 동일한 코드입니다.)
     for (int i = 0; i < MSG_LENGTH; i++) {
         send_data(msg[i]);
+        // 문자 데이터를 송신합니다.
     }
 }
 ```
