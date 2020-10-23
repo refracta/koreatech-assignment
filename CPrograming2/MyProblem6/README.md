@@ -64,6 +64,7 @@ int main() {
     // = {'S', 'c', 'h', ..., 'i', 'e', 's'}; (윗줄과 동일한 코드입니다.)
     for (int i = 0; i < MSG_LENGTH; i++) {
         send_data(msg[i]);
+        // 문자 데이터를 송신합니다.
     }
 }
 ```
@@ -98,7 +99,7 @@ svn export https://github.com/refracta/koreatech-assignment/branches/master/CPro
 
 3. MyProblem5를 REMSC로 이름 변경
 
-4. Visual Studio - 로컬 폴더 열기 또는 파일 - 열기 - CMake - TicTacToe/CMakeLists.txt
+4. Visual Studio - 로컬 폴더 열기 또는 파일 - 열기 - CMake - REMSC/CMakeLists.txt
 
 ![vs1](./capture/vs1-1.png)
 
@@ -145,3 +146,6 @@ Current System: Big-Endian
 Reverse Endian Machine: Little-Endian
 Reverse Endian Machine Output: Scheduling in Heterogeneous Computing Environments for Proximity Queries
 ```
+
+## 해설
+solve.c 참조
