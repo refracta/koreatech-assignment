@@ -98,7 +98,7 @@ svn export https://github.com/refracta/koreatech-assignment/branches/master/CPro
 
 3. MyProblem5를 REMSC로 이름 변경
 
-4. Visual Studio - 로컬 폴더 열기 또는 파일 - 열기 - CMake - TicTacToe/CMakeLists.txt
+4. Visual Studio - 로컬 폴더 열기 또는 파일 - 열기 - CMake - REMSC/CMakeLists.txt
 
 ![vs1](./capture/vs1-1.png)
 
