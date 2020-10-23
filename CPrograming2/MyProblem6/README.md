@@ -145,3 +145,6 @@ Current System: Big-Endian
 Reverse Endian Machine: Little-Endian
 Reverse Endian Machine Output: Scheduling in Heterogeneous Computing Environments for Proximity Queries
 ```
+
+## 해설
+solve.c 참조
