@@ -41,7 +41,6 @@ Reverse Endian Machine Output: (cE220_i>g11e 0:eer1ge2d01s/C2Lp210n[2hnJi0>szU+1
 
 ```C
 "Scheduling in Heterogeneous Computing Environments for Proximity Queries" 
-// (72 Characters, 72 % 4==0 -> True!)
 ```
 
 ## Baseline Code (main.c)
