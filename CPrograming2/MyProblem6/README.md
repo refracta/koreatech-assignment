@@ -68,6 +68,30 @@ int main() {
 }
 ```
 
+## 프로그램의 목적
+포인터, 함수 포인터, 엔디안 강의 내용 복습 
+
+## 프로그램의 기능
+유사 직렬 통신 인터페이스를 통한 직렬 통신 시뮬레이션 
+
+## 입력 & 출력 양식 (실행 예시)
+### Little-Endian System
+```
+Current System: Little-Endian
+Reverse Endian Machine: Big-Endian
+Reverse Endian Machine Output: Scheduling in Heterogeneous Computing Environments for Proximity Queries
+```
+
+### Big-Endian System
+```
+Current System: Big-Endian
+Reverse Endian Machine: Little-Endian
+Reverse Endian Machine Output: Scheduling in Heterogeneous Computing Environments for Proximity Queries
+```
+
+## 해설
+solve.c 참조
+
 ### 빠른 설치 (Command Line)
 ```
 // Install Subversion
@@ -124,27 +148,3 @@ cmake CMakeLists.txt
 make
 ```
 > WARNING: main.c 파일은 CP949로 인코딩되었으니 Linux/Mac 사용자는 유의!
-
-## 프로그램의 목적
-포인터, 함수 포인터, 엔디안 강의 내용 복습 
-
-## 프로그램의 기능
-유사 직렬 통신 인터페이스를 통한 직렬 통신 시뮬레이션 
-
-## 입력 & 출력 양식 (실행 예시)
-### Little-Endian System
-```
-Current System: Little-Endian
-Reverse Endian Machine: Big-Endian
-Reverse Endian Machine Output: Scheduling in Heterogeneous Computing Environments for Proximity Queries
-```
-
-### Big-Endian System
-```
-Current System: Big-Endian
-Reverse Endian Machine: Little-Endian
-Reverse Endian Machine Output: Scheduling in Heterogeneous Computing Environments for Proximity Queries
-```
-
-## 해설
-solve.c 참조
