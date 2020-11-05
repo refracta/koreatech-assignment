@@ -16,7 +16,7 @@
 
 이 기계는 직렬 통신을 통해 문자 데이터를 수신하여 출력하는 기능이 있습니다.
 
-*이 결과는 remscinterface를 통해 PC에서 확인할 수 있습니다.
+* 기계의 출력 결과는 remscinterface를 통해 콘솔 출력으로 확인할 수 있습니다. (기계가 출력한 문자가 자동으로 콘솔에 출력됩니다!)
 
 
 ## 통신 과정
@@ -41,7 +41,6 @@ Reverse Endian Machine Output: (cE220_i>g11e 0:eer1ge2d01s/C2Lp210n[2hnJi0>szU+1
 
 ```C
 "Scheduling in Heterogeneous Computing Environments for Proximity Queries" 
-// (72 Characters, 72 % 4==0 -> True!)
 ```
 
 ## Baseline Code (main.c)
@@ -68,6 +67,30 @@ int main() {
     }
 }
 ```
+
+## 프로그램의 목적
+포인터, 함수 포인터, 엔디안 강의 내용 복습 
+
+## 프로그램의 기능
+유사 직렬 통신 인터페이스를 통한 직렬 통신 시뮬레이션 
+
+## 입력 & 출력 양식 (실행 예시)
+### Little-Endian System
+```
+Current System: Little-Endian
+Reverse Endian Machine: Big-Endian
+Reverse Endian Machine Output: Scheduling in Heterogeneous Computing Environments for Proximity Queries
+```
+
+### Big-Endian System
+```
+Current System: Big-Endian
+Reverse Endian Machine: Little-Endian
+Reverse Endian Machine Output: Scheduling in Heterogeneous Computing Environments for Proximity Queries
+```
+
+## 해설
+solve.c 참조
 
 ### 빠른 설치 (Command Line)
 ```
@@ -125,27 +148,3 @@ cmake CMakeLists.txt
 make
 ```
 > WARNING: main.c 파일은 CP949로 인코딩되었으니 Linux/Mac 사용자는 유의!
-
-## 프로그램의 목적
-포인터, 함수 포인터, 엔디안 강의 내용 복습 
-
-## 프로그램의 기능
-유사 직렬 통신 인터페이스를 통한 직렬 통신 시뮬레이션 
-
-## 입력 & 출력 양식 (실행 예시)
-### Little-Endian System
-```
-Current System: Little-Endian
-Reverse Endian Machine: Big-Endian
-Reverse Endian Machine Output: Scheduling in Heterogeneous Computing Environments for Proximity Queries
-```
-
-### Big-Endian System
-```
-Current System: Big-Endian
-Reverse Endian Machine: Little-Endian
-Reverse Endian Machine Output: Scheduling in Heterogeneous Computing Environments for Proximity Queries
-```
-
-## 해설
-solve.c 참조
