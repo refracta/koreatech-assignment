@@ -9,7 +9,7 @@
 * @param s wchar_t 문자열
 * @return 전각 여부 bool
 */
-bool WCharUtils::is_full_width(wchar_t c)
+bool WCharUtils::is_full_width(const wchar_t c)
 {
     if (c < 256 || (c >= 0xff61 && c <= 0xff9f))
     {
@@ -26,7 +26,7 @@ bool WCharUtils::is_full_width(wchar_t c)
 * @param s wchar_t 문자열
 * @return 문자열의 길이
 */
-int WCharUtils::strrlen(wchar_t *s)
+int WCharUtils::strrlen(const wchar_t *s)
 {
     int len = wcslen(s);
     int rlen = len;

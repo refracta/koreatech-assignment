@@ -36,8 +36,8 @@ typedef struct
 {
     int x;
     int y;
-    wchar_t *name;
-    wchar_t **list;
+    const wchar_t *name;
+    const wchar_t **list;
     int length;
     int current_index;
     short outline_tbcolor;
@@ -54,7 +54,7 @@ typedef struct
 {
     int x;
     int y;
-    wchar_t *message;
+    const wchar_t *message;
     int rlen;
     short outline_tbcolor;
     short message_tbcolor;

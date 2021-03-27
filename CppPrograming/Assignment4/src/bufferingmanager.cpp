@@ -104,7 +104,7 @@ void BufferingManager::draw() {
     SetConsoleCursorInfo(screen_buffer, &cursor_info);
 }
 
-void BufferingManager::wprintf(wchar_t *format, ...) {
+void BufferingManager::wprintf(const wchar_t *format, ...) {
     va_list arg_ptr;
 
             va_start(arg_ptr, format);
@@ -138,7 +138,7 @@ void BufferingManager::clear(){
  * @param y 세로줄 출력 위치
  * @param format 포맷 문자열
  */
-void BufferingManager::xywprintf(int x, int y, wchar_t *format, ...) {
+void BufferingManager::xywprintf(int x, int y, const wchar_t *format, ...) {
     va_list arg_ptr;
 
             va_start(arg_ptr, format);

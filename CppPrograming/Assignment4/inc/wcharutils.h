@@ -9,7 +9,7 @@
 #include <wchar.h>
 
 namespace WCharUtils {
-    bool is_full_width(wchar_t c);
-    int strrlen(wchar_t *s);
+    bool is_full_width(const wchar_t c);
+    int strrlen(const wchar_t *s);
 }
 #endif

@@ -159,9 +159,9 @@ void ConsoleUtils::set_cursor_size(int cursor_size)
  * @brief 창 제목을 설정한다.
  * @title 창 제목
  */
-void ConsoleUtils::set_console_title(const char *title)
+void ConsoleUtils::set_console_title(const wchar_t *title)
 {
-    SetConsoleTitle(title);
+    SetConsoleTitleW(title);
 }
 
 /**

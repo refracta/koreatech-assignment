@@ -65,7 +65,7 @@ int Game::handle_game_key(int c, void *param) {
 
 void Game::init_game() {
     ConsoleUtils::set_encoding_utf8();
-    ConsoleUtils::set_console_title(u8"Fifteen Puzzle");
+    ConsoleUtils::set_console_title(L"Fifteen Puzzle");
     ConsoleUtils::set_default_mode();
     ConsoleUtils::set_cursor_visibility(false);
     ConsoleUtils::set_console_size(CONSOLE_COLS, CONSOLE_LINES);
@@ -77,7 +77,7 @@ void Game::init_game() {
 MainMenu Game::run_main_menu() {
     MenuData menu;
     menu.name = L"      메뉴";
-    wchar_t **list = (wchar_t **) malloc(sizeof(wchar_t *) * 6);
+    const wchar_t **list = (const wchar_t **) malloc(sizeof(wchar_t *) * 6);
     list[0] = L"게임 시작 (숫자)";
     list[1] = L"게임 시작 (코룡)";
     list[2] = L"게임 시작 (레나)";
@@ -309,7 +309,7 @@ void Game::run_ranking(GameData *data) {
         swprintf(list[i], BUFSIZ, L"%2d위 %s %.1lf초", i + 1, s.player_name, s.time);
     }
 
-    menu.list = list;
+    menu.list = (const wchar_t**) list;
     menu.length = ranking_data.last_index;
     menu.current_index = 0;
 
@@ -391,7 +391,7 @@ void Game::draw_number_block(int cursor_x, int cursor_y, int number) {
 }
 
 void Game::shuffle_with_draw(GameData *data) {
-    ConsoleUtils::set_console_title("Fifteen Puzzle (Shuffle)");
+    ConsoleUtils::set_console_title(L"Fifteen Puzzle (Shuffle)");
     for (int i = 0; i < 100; i++) {
         data->puzzle.shuffle_once();
         SystemUtils::wait(10);
@@ -400,7 +400,7 @@ void Game::shuffle_with_draw(GameData *data) {
     }
     memcpy(data->save.map, data->puzzle.map, sizeof(int) * DIM * DIM);
     memcpy(data->save.current_map, data->puzzle.map, sizeof(int) * DIM * DIM);
-    ConsoleUtils::set_console_title("Fifteen Puzzle");
+    ConsoleUtils::set_console_title(L"Fifteen Puzzle");
 }
 
 void Game::run_player_name_prompt(GameData *data) {

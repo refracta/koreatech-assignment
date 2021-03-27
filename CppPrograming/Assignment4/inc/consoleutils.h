@@ -16,6 +16,11 @@
 #include <Windows.h>
 #include "systemutils.h"
 
+#if defined(_WIN32) || defined(WIN32)
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:4996)
+#endif
+
 #define CURSOR_SIZE_SMALL 25
 #define CURSOR_SIZE_LARGE 100
 
@@ -48,7 +53,7 @@ namespace ConsoleUtils {
     void set_cursor_visibility(bool visibility);
     void set_console_size(int cols, int lines);
     void set_cursor_size(int cursor_size);
-    void set_console_title(const char *title);
+    void set_console_title(const wchar_t*title);
     void clear_console();
     void xyprintf(int x, int y, char *format, ...);
     void xywprintf(int x, int y, wchar_t *format, ...);

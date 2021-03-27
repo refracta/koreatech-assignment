@@ -10,6 +10,11 @@
 #include "wcharutils.h"
 #include "consoleutils.h"
 
+#if defined(_WIN32) || defined(WIN32)
+#define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable:4996)
+#endif
+
 class BufferingManager {
 public:
     static BufferingManager &instance();
@@ -20,8 +25,8 @@ public:
     int get_width();
     int get_height();
     void clear();
-    void xywprintf(int x, int y, wchar_t *format, ...);
-    void wprintf(wchar_t *format, ...);
+    void xywprintf(int x, int y, const wchar_t *format, ...);
+    void wprintf(const wchar_t *format, ...);
     void set_print_color(short color);
     short get_print_color();
     bool get_cursor_visibility();
