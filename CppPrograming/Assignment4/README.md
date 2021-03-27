@@ -14,4 +14,4 @@ Tested on VS2019 (C++14)
 
 
 ![](https://user-images.githubusercontent.com/58779799/112709105-c818c700-8ef9-11eb-8353-3517ef9fa39f.gif)
-> 셔플이 1로 설정된 시연입니다.
+> 셔플 횟수가 1로 설정된 시연용 이미지입니다.
