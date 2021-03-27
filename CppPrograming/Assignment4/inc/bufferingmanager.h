@@ -19,15 +19,15 @@ public:
     void draw();
     int get_width();
     int get_height();
-    void BufferingManager::clear();
-    void BufferingManager::xywprintf(int x, int y, wchar_t *format, ...);
-    void BufferingManager::wprintf(wchar_t *format, ...);
-    void BufferingManager::set_print_color(short color);
-    short BufferingManager::get_print_color();
-    bool BufferingManager::get_cursor_visibility();
-    void BufferingManager::set_cursor_visibility(bool visibility);
+    void clear();
+    void xywprintf(int x, int y, wchar_t *format, ...);
+    void wprintf(wchar_t *format, ...);
+    void set_print_color(short color);
+    short get_print_color();
+    bool get_cursor_visibility();
+    void set_cursor_visibility(bool visibility);
     COORD get_cursor_position();
-    void BufferingManager::set_cursor_position(int x, int y);
+    void set_cursor_position(int x, int y);
 
 private:
     BufferingManager();
