@@ -11,3 +11,7 @@
 --> (5) 아스키 아트를 이용한 그림 퍼즐 기능
 ```
 Tested on VS2019 (C++14)
+
+
+![](https://user-images.githubusercontent.com/58779799/112709105-c818c700-8ef9-11eb-8353-3517ef9fa39f.gif)
+> 셔플이 1로 설정된 시연입니다.
