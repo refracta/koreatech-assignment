@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project: src/Project.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Project.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_project_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef PROJECT_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define PROJECT_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_r_g_dot_matrix_renderer_8h.html">RGDotMatrixRenderer.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_r_g_dot_matrix_font_8h.html">RGDotMatrixFont.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_sound_controller_8h.html">SoundController.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_tune_8h.html">Tune.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_e_e_p_r_o_m_utils_8h.html">EEPROMUtils.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="_project_8h.html#ad04ea3cf29dcb55905bf5ce7ea8e3d7a">   12</a></span><span class="preprocessor">#define NOTE_PREVIEW 3</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="_project_8h.html#af5e604b3cb03bc47de0f4c195f663af0">   13</a></span><span class="preprocessor">#define NUM_OF_MUSIC_DATA 4</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="_project_8h.html#a98e812fcbe0b0140554ace18a16a9a2f">   14</a></span><span class="preprocessor">#define CUSTOM_MUSIC_INDEX 3</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// 디버그 플래그</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="_project_8h.html#ac80a3592e72fd96b772ee47a7d8e0d0a">   17</a></span><span class="preprocessor">#define DEBUG_MODE</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifdef DEBUG_MODE</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_project_8h.html#abdd05db5875a4cc354452aecf4da3c1f">   19</a></span><span class="preprocessor">#define debug(P) Serial.print(P)</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_project_8h.html#acd5b8945ad35d058848cf12494aa15c6">   20</a></span><span class="preprocessor">#define debugln(P) Serial.println(P)</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define debug(P)</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define debugln(P)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// 버튼</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="_project_8h.html#a959fbfc26c1b74d4c3e938994113f9ab">   27</a></span><span class="preprocessor">#define BUTTON1_PIN 8</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="_project_8h.html#ad8d0f2535ca20affce17b40fb762f776">   28</a></span><span class="preprocessor">#define BUTTON2_PIN A3</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="_project_8h.html#a2ae1b9acd60854dc4a31a4ea6e8447bb">   29</a></span><span class="preprocessor">#define BUTTON3_PIN 0</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_project_8h.html#a021c26f38b070fea4bca5287d67c703b">   30</a></span><span class="preprocessor">#define BUTTON4_PIN 1</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="_project_8h.html#ae0a9e1ad8de9039e51607d954bd258d0">   31</a></span><span class="preprocessor">#define NUM_OF_BUTTON 4</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="_project_8h.html#ad93dc1c4e1c26d6b4a0cda75cc3cdf5a">   33</a></span><span class="preprocessor">#define IS_BUTTON_PRESSED(BUTTON_PIN) (!digitalRead(BUTTON_PIN))</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="_project_8h.html#a257cd40479b97b92c2eaeb130e45b760">   34</a></span><span class="preprocessor">#define IS_ANY_BUTTON_PRESSED() (IS_BUTTON_PRESSED(BUTTON1_PIN) || IS_BUTTON_PRESSED(BUTTON2_PIN) || IS_BUTTON_PRESSED(BUTTON3_PIN) || IS_BUTTON_PRESSED(BUTTON4_PIN))</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="_project_8h.html#a792e9ccc32eb125daf93947c8cfdaed5">   36</a></span><span class="preprocessor">#define DISABLE_SERIAL_PIN_BUTTONS() pinMode(BUTTON3_PIN, INPUT); pinMode(BUTTON4_PIN, INPUT);</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="_project_8h.html#ad0054aa8969227c9c4a2c6220761cdc8">   37</a></span><span class="preprocessor">#define ENABLE_SERIAL_PIN_BUTTONS() pinMode(BUTTON3_PIN, INPUT_PULLUP); pinMode(BUTTON4_PIN, INPUT_PULLUP);</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="_project_8h.html#aa089015fd4e4e9a305ec946401ad0800">   39</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_project_8h.html#aa089015fd4e4e9a305ec946401ad0800">BUTTON_PINS</a>[] = {<a class="code hl_define" href="_project_8h.html#a959fbfc26c1b74d4c3e938994113f9ab">BUTTON1_PIN</a>, <a class="code hl_define" href="_project_8h.html#ad8d0f2535ca20affce17b40fb762f776">BUTTON2_PIN</a>, <a class="code hl_define" href="_project_8h.html#a2ae1b9acd60854dc4a31a4ea6e8447bb">BUTTON3_PIN</a>, <a class="code hl_define" href="_project_8h.html#a021c26f38b070fea4bca5287d67c703b">BUTTON4_PIN</a>};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// 렌더러와 렌더 버퍼</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="_project_8h.html#ad3587921d410f15174403aeb8ae6685c">   42</a></span><a class="code hl_class" href="class_r_g_dot_matrix_renderer.html">RGDotMatrixRenderer</a> <a class="code hl_function" href="_project_8h.html#ad3587921d410f15174403aeb8ae6685c">renderer</a>((<span class="keywordtype">int</span>[]) {A4, A5, 2, 3, 4, 5, 6, 7}, (<span class="keywordtype">int</span>[]) {10, 10, 11, 11, 12, 12, 13, 13}, A0, A1, A2);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="_project_8h.html#a2a6d8169f1a00894a7fd7529d1fd759c">   43</a></span><a class="code hl_class" href="class_dot_matrix_image.html">DotMatrixImage</a> *<a class="code hl_variable" href="_project_8h.html#a2a6d8169f1a00894a7fd7529d1fd759c">rib</a> = <span class="keyword">nullptr</span>; <span class="comment">// Single renderImageBuffer</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="_project_8h.html#a3ef6de692217f86ea210096187c444e0">   44</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="_project_8h.html#a3ef6de692217f86ea210096187c444e0">ribSize</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="_project_8h.html#a4ebb3e562df5f285ccafda60a68b1e8e">   45</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="_project_8h.html#a4ebb3e562df5f285ccafda60a68b1e8e">playIndex</a> = 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="_project_8h.html#ad49b17affee8b34c9dc37faf727df466">   46</a></span><a class="code hl_class" href="class_r_g_dot_matrix_image.html">RGDotMatrixImage</a> <a class="code hl_variable" href="_project_8h.html#ad49b17affee8b34c9dc37faf727df466">renderImage</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">// 딜레이 하이재킹</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_project_8h.html#ad06cd1d1e775b653844bb91a63b6d0aa">   49</a></span>void (*<a class="code hl_variable" href="_project_8h.html#ad06cd1d1e775b653844bb91a63b6d0aa">_delay</a>)(<span class="keywordtype">unsigned</span> long) = <a class="code hl_define" href="_project_8h.html#a26c5ba974a7dc9913d042b92af0d8e81">delay</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="_project_8h.html#a26c5ba974a7dc9913d042b92af0d8e81">   51</a></span><span class="preprocessor">#define delay(MS) delayWithCustomHandler(MS)</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="_project_8h.html#a6a652b231aa8db86164ba138a150cd55">   53</a></span>void (*<a class="code hl_variable" href="_project_8h.html#a6a652b231aa8db86164ba138a150cd55">customHandler</a>)(<span class="keywordtype">unsigned</span> long, <span class="keywordtype">unsigned</span> long);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="_project_8h.html#a47ad9d2d98721e64d8cf4552af0fc600">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_project_8h.html#a47ad9d2d98721e64d8cf4552af0fc600">delayWithCustomHandler</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> ms) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> current = millis();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> delta;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">while</span> ((delta = millis() - current) &lt; ms) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="_project_8h.html#a6a652b231aa8db86164ba138a150cd55">customHandler</a>) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <a class="code hl_variable" href="_project_8h.html#a6a652b231aa8db86164ba138a150cd55">customHandler</a>(current, ms - delta);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// 음악 데이터</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="_project_8h.html#a6be814963e9e10b555376eaaf39dc697">   66</a></span>String <a class="code hl_variable" href="_project_8h.html#a6be814963e9e10b555376eaaf39dc697">musicData</a>[<a class="code hl_define" href="_project_8h.html#af5e604b3cb03bc47de0f4c195f663af0">NUM_OF_MUSIC_DATA</a>];</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="_project_8h.html#a1ad53df52b108f9b3179c54b2dee851a">   67</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="_project_8h.html#a1ad53df52b108f9b3179c54b2dee851a">musicDataCursor</a> = 0;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="_project_8h.html#aff8d9ad44d9020f7646f51ae78439c50">   68</a></span><a class="code hl_class" href="class_sound_controller.html">SoundController</a> <a class="code hl_function" href="_project_8h.html#aff8d9ad44d9020f7646f51ae78439c50">soundController</a>(9, <a class="code hl_function" href="_project_8h.html#a47ad9d2d98721e64d8cf4552af0fc600">delayWithCustomHandler</a>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="_project_8h.html#addee3514c38059935da909d2cf3faf55">   70</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_project_8h.html#addee3514c38059935da909d2cf3faf55">initMusicData</a>() {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_variable" href="_project_8h.html#a6be814963e9e10b555376eaaf39dc697">musicData</a>[0] = F(</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="stringliteral">&quot;TAKE ON ME:d=4,o=4,b=160:8f#5,8f#5,8f#5,8d5,8p,8b,8p,8e5,8p,8e5,8p,8e5,8g#5,8g#5,8a5,8b5,8a5,8a5,8a5,8e5,8p,8d5,8p,8f#5,8p,8f#5,8p,8f#5,8e5,8e5,8f#5,8e5,8f#5,8f#5,8f#5,8d5,8p,8b,8p,8e5,8p,8e5,8p,8e5,8g#5,8g#5,8a5,8b5,8a5,8a5,8a5,8e5,8p,8d5,8p,8f#5,8p,8f#5,8p,8f#5,8e5,8e5&quot;</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_variable" href="_project_8h.html#a6be814963e9e10b555376eaaf39dc697">musicData</a>[1] = F(</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="stringliteral">&quot;THE SIMPSONS:d=4,o=5,b=160:c.6,e6,f#6,8a6,g.6,e6,c6,8a,8f#,8f#,8f#,2g,8p,8p,8f#,8f#,8f#,8g,a#.,8c6,8c6,8c6,c6&quot;</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_variable" href="_project_8h.html#a6be814963e9e10b555376eaaf39dc697">musicData</a>[2] = F(</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="stringliteral">&quot;ENTERTAINER:d=4,o=5,b=140:8d,8d#,8e,c6,8e,c6,8e,2c.6,8c6,8d6,8d#6,8e6,8c6,8d6,e6,8b,d6,2c6,p,8d,8d#,8e,c6,8e,c6,8e,2c.6,8p,8a,8g,8f#,8a,8c6,e6,8d6,8c6,8a,2d6&quot;</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_variable" href="_project_8h.html#a6be814963e9e10b555376eaaf39dc697">musicData</a>[3] = F(<span class="stringliteral">&quot;CUSTOM:&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">// 게임 상태</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1">   81</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1">GameStatus</a> {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1a9873e16bc1530dedb416060abbeea6d0">   82</a></span>    <a class="code hl_enumvalue" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1aa8837eaf5f57386a2cd20e077fb840bf">MAIN_SCREEN</a>, <a class="code hl_enumvalue" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1abd7d37072d896d1b5a71c239cdf22050">SELECT_MUSIC_SCREEN</a>, <a class="code hl_enumvalue" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1a9873e16bc1530dedb416060abbeea6d0">GAME_SCREEN</a>, <a class="code hl_enumvalue" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1a0b609bd9cce2b38f3f76f23e0a3ff372">GAME_RESULT_SCREEN</a></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1a0b609bd9cce2b38f3f76f23e0a3ff372">   83</a></span>};</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="_project_8h.html#abe0bb4f409ba54763cab53917d3ef656">   84</a></span><span class="keywordtype">boolean</span> <a class="code hl_variable" href="_project_8h.html#abe0bb4f409ba54763cab53917d3ef656">isInited</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="_project_8h.html#af9f42ee5de4ea371b4008ace819aef73">   85</a></span><a class="code hl_enumeration" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1">GameStatus</a> <a class="code hl_variable" href="_project_8h.html#af9f42ee5de4ea371b4008ace819aef73">previousStatus</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="_project_8h.html#a1c5fb0f1a91e3df5be20fd622190b3dd">   86</a></span><a class="code hl_enumeration" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1">GameStatus</a> <a class="code hl_variable" href="_project_8h.html#a1c5fb0f1a91e3df5be20fd622190b3dd">currentStatus</a> = <a class="code hl_enumvalue" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1aa8837eaf5f57386a2cd20e077fb840bf">MAIN_SCREEN</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">// 인게임 노트 데이터 처리</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="_project_8h.html#a68fce1c521c203a9fe08372623bb8814">   89</a></span><span class="keywordtype">char</span> <a class="code hl_variable" href="_project_8h.html#a68fce1c521c203a9fe08372623bb8814">nextNotes</a>[3];</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="_project_8h.html#a9506caa20f6ea0953e4d2d6124e23cd4">   90</a></span><span class="keywordtype">boolean</span> <a class="code hl_variable" href="_project_8h.html#a9506caa20f6ea0953e4d2d6124e23cd4">isHit</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="_project_8h.html#aaa003c626026151d78c0b3921d2b0fe9">   91</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="_project_8h.html#aaa003c626026151d78c0b3921d2b0fe9">BASE_TIME</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">// 인게임 렌더링</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="_project_8h.html#ad5e536b50b2b2de60c803041a68e01c6">   94</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="_project_8h.html#ad5e536b50b2b2de60c803041a68e01c6">FONT_NOTE_COLS</a>[] = {<a class="code hl_define" href="_r_g_dot_matrix_font_8h.html#aaefa44a595f171e88adc18d819460c35">FONT_NOTE_COL1</a>, <a class="code hl_define" href="_r_g_dot_matrix_font_8h.html#aed6bf88fba733ecf4815f778cca55aa9">FONT_NOTE_COL2</a>, <a class="code hl_define" href="_r_g_dot_matrix_font_8h.html#a73c666d39e7b0dffa9704d509afb43cd">FONT_NOTE_COL3</a>, <a class="code hl_define" href="_r_g_dot_matrix_font_8h.html#ac0eedc9403fc8c67ae506745b8764b92">FONT_NOTE_COL4</a>};</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="_project_8h.html#ae21849f57f4acfbbcdb066ab792d9bae">   95</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="_project_8h.html#ae21849f57f4acfbbcdb066ab792d9bae">FONT_GAME_COLS</a>[] = {<a class="code hl_define" href="_r_g_dot_matrix_font_8h.html#aa58119f186f1269f088ccaad3cbdebe8">FONT_GAME_COL1</a>, <a class="code hl_define" href="_r_g_dot_matrix_font_8h.html#a9cee4f86ed44c7d8fa37d6d83a22b7ff">FONT_GAME_COL2</a>, <a class="code hl_define" href="_r_g_dot_matrix_font_8h.html#a2419af4be36773bc3770aee2072d000a">FONT_GAME_COL3</a>, <a class="code hl_define" href="_r_g_dot_matrix_font_8h.html#ab34b4a88e9f74be71fa0087301fdbddc">FONT_GAME_COL4</a>};</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="struct_time_based_r_g_dot_matrix.html">   96</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_time_based_r_g_dot_matrix.html">TimeBasedRGDotMatrix</a> {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="struct_time_based_r_g_dot_matrix.html#a949a208fa97b7841d89c16a8486a4f32">   97</a></span>    <a class="code hl_class" href="class_r_g_dot_matrix_image.html">RGDotMatrixImage</a> <a class="code hl_variable" href="struct_time_based_r_g_dot_matrix.html#a949a208fa97b7841d89c16a8486a4f32">image</a>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="struct_time_based_r_g_dot_matrix.html#aec3a445af901de6dab5ba34cc38b92e6">   98</a></span>    <span class="keywordtype">long</span> <a class="code hl_variable" href="struct_time_based_r_g_dot_matrix.html#aec3a445af901de6dab5ba34cc38b92e6">targetTime</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>};</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="_project_8h.html#a8d092d8cc82de0e6db5e37abb4b86fad">  100</a></span><span class="preprocessor">#define NUM_OF_TIME_BASED_EFFECT 3</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="_project_8h.html#a7c22a85e253dbc44e2cab17735a45792">  101</a></span><a class="code hl_struct" href="struct_time_based_r_g_dot_matrix.html">TimeBasedRGDotMatrix</a> <a class="code hl_variable" href="_project_8h.html#a7c22a85e253dbc44e2cab17735a45792">timeBasedEffects</a>[<a class="code hl_define" href="_project_8h.html#a8d092d8cc82de0e6db5e37abb4b86fad">NUM_OF_TIME_BASED_EFFECT</a>];</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">// 인게임 데이터</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="_project_8h.html#a7badb02def0dc38f53d553b508640233">  104</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="_project_8h.html#a7badb02def0dc38f53d553b508640233">maxCombo</a> = 0;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="_project_8h.html#a4cb3fe817072bbf8f876295d34726aed">  105</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="_project_8h.html#a4cb3fe817072bbf8f876295d34726aed">combo</a> = 0;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="_project_8h.html#a9dffb288f0f2281a0b9abbd8efaa5a18">  106</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_project_8h.html#a9dffb288f0f2281a0b9abbd8efaa5a18">score</a> = 0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">// 스크롤 메시지 버퍼</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="_project_8h.html#a058d7d0c3122ae7b63aa40763ea3f2f0">  109</a></span><span class="preprocessor">#define MESSAGE_BUFFER_LENGTH 20</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="_project_8h.html#a9ecdeb50142320b017345861141760cc">  110</a></span><span class="keywordtype">char</span> <a class="code hl_variable" href="_project_8h.html#a9ecdeb50142320b017345861141760cc">message</a>[<a class="code hl_define" href="_project_8h.html#a058d7d0c3122ae7b63aa40763ea3f2f0">MESSAGE_BUFFER_LENGTH</a>];</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="_project_8h.html#aa1c581e80fd401f653a5851c9d4271b1">  111</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="_project_8h.html#aa1c581e80fd401f653a5851c9d4271b1">messageLen</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keywordtype">void</span> <a class="code hl_function" href="_project_8h.html#a2bc158d1aacda7c1b8d2c48cf8839201">changeGameStatus</a>(<a class="code hl_enumeration" href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1">GameStatus</a>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_e_e_p_r_o_m_utils_8h_html"><div class="ttname"><a href="_e_e_p_r_o_m_utils_8h.html">EEPROMUtils.h</a></div></div>
+<div class="ttc" id="a_project_8h_html_a021c26f38b070fea4bca5287d67c703b"><div class="ttname"><a href="_project_8h.html#a021c26f38b070fea4bca5287d67c703b">BUTTON4_PIN</a></div><div class="ttdeci">#define BUTTON4_PIN</div><div class="ttdef"><b>Definition:</b> Project.h:30</div></div>
+<div class="ttc" id="a_project_8h_html_a058d7d0c3122ae7b63aa40763ea3f2f0"><div class="ttname"><a href="_project_8h.html#a058d7d0c3122ae7b63aa40763ea3f2f0">MESSAGE_BUFFER_LENGTH</a></div><div class="ttdeci">#define MESSAGE_BUFFER_LENGTH</div><div class="ttdef"><b>Definition:</b> Project.h:109</div></div>
+<div class="ttc" id="a_project_8h_html_a1ad53df52b108f9b3179c54b2dee851a"><div class="ttname"><a href="_project_8h.html#a1ad53df52b108f9b3179c54b2dee851a">musicDataCursor</a></div><div class="ttdeci">int musicDataCursor</div><div class="ttdef"><b>Definition:</b> Project.h:67</div></div>
+<div class="ttc" id="a_project_8h_html_a1c5fb0f1a91e3df5be20fd622190b3dd"><div class="ttname"><a href="_project_8h.html#a1c5fb0f1a91e3df5be20fd622190b3dd">currentStatus</a></div><div class="ttdeci">GameStatus currentStatus</div><div class="ttdef"><b>Definition:</b> Project.h:86</div></div>
+<div class="ttc" id="a_project_8h_html_a26c5ba974a7dc9913d042b92af0d8e81"><div class="ttname"><a href="_project_8h.html#a26c5ba974a7dc9913d042b92af0d8e81">delay</a></div><div class="ttdeci">#define delay(MS)</div><div class="ttdef"><b>Definition:</b> Project.h:51</div></div>
+<div class="ttc" id="a_project_8h_html_a2a6d8169f1a00894a7fd7529d1fd759c"><div class="ttname"><a href="_project_8h.html#a2a6d8169f1a00894a7fd7529d1fd759c">rib</a></div><div class="ttdeci">DotMatrixImage * rib</div><div class="ttdef"><b>Definition:</b> Project.h:43</div></div>
+<div class="ttc" id="a_project_8h_html_a2ae1b9acd60854dc4a31a4ea6e8447bb"><div class="ttname"><a href="_project_8h.html#a2ae1b9acd60854dc4a31a4ea6e8447bb">BUTTON3_PIN</a></div><div class="ttdeci">#define BUTTON3_PIN</div><div class="ttdef"><b>Definition:</b> Project.h:29</div></div>
+<div class="ttc" id="a_project_8h_html_a2bc158d1aacda7c1b8d2c48cf8839201"><div class="ttname"><a href="_project_8h.html#a2bc158d1aacda7c1b8d2c48cf8839201">changeGameStatus</a></div><div class="ttdeci">void changeGameStatus(GameStatus)</div><div class="ttdef"><b>Definition:</b> Project.cpp:141</div></div>
+<div class="ttc" id="a_project_8h_html_a3ef6de692217f86ea210096187c444e0"><div class="ttname"><a href="_project_8h.html#a3ef6de692217f86ea210096187c444e0">ribSize</a></div><div class="ttdeci">int ribSize</div><div class="ttdef"><b>Definition:</b> Project.h:44</div></div>
+<div class="ttc" id="a_project_8h_html_a47ad9d2d98721e64d8cf4552af0fc600"><div class="ttname"><a href="_project_8h.html#a47ad9d2d98721e64d8cf4552af0fc600">delayWithCustomHandler</a></div><div class="ttdeci">void delayWithCustomHandler(unsigned long ms)</div><div class="ttdef"><b>Definition:</b> Project.h:55</div></div>
+<div class="ttc" id="a_project_8h_html_a4cb3fe817072bbf8f876295d34726aed"><div class="ttname"><a href="_project_8h.html#a4cb3fe817072bbf8f876295d34726aed">combo</a></div><div class="ttdeci">int combo</div><div class="ttdef"><b>Definition:</b> Project.h:105</div></div>
+<div class="ttc" id="a_project_8h_html_a4ebb3e562df5f285ccafda60a68b1e8e"><div class="ttname"><a href="_project_8h.html#a4ebb3e562df5f285ccafda60a68b1e8e">playIndex</a></div><div class="ttdeci">int playIndex</div><div class="ttdef"><b>Definition:</b> Project.h:45</div></div>
+<div class="ttc" id="a_project_8h_html_a68fce1c521c203a9fe08372623bb8814"><div class="ttname"><a href="_project_8h.html#a68fce1c521c203a9fe08372623bb8814">nextNotes</a></div><div class="ttdeci">char nextNotes[3]</div><div class="ttdef"><b>Definition:</b> Project.h:89</div></div>
+<div class="ttc" id="a_project_8h_html_a6a652b231aa8db86164ba138a150cd55"><div class="ttname"><a href="_project_8h.html#a6a652b231aa8db86164ba138a150cd55">customHandler</a></div><div class="ttdeci">void(* customHandler)(unsigned long, unsigned long)</div><div class="ttdef"><b>Definition:</b> Project.h:53</div></div>
+<div class="ttc" id="a_project_8h_html_a6be814963e9e10b555376eaaf39dc697"><div class="ttname"><a href="_project_8h.html#a6be814963e9e10b555376eaaf39dc697">musicData</a></div><div class="ttdeci">String musicData[NUM_OF_MUSIC_DATA]</div><div class="ttdef"><b>Definition:</b> Project.h:66</div></div>
+<div class="ttc" id="a_project_8h_html_a7badb02def0dc38f53d553b508640233"><div class="ttname"><a href="_project_8h.html#a7badb02def0dc38f53d553b508640233">maxCombo</a></div><div class="ttdeci">int maxCombo</div><div class="ttdef"><b>Definition:</b> Project.h:104</div></div>
+<div class="ttc" id="a_project_8h_html_a7c22a85e253dbc44e2cab17735a45792"><div class="ttname"><a href="_project_8h.html#a7c22a85e253dbc44e2cab17735a45792">timeBasedEffects</a></div><div class="ttdeci">TimeBasedRGDotMatrix timeBasedEffects[NUM_OF_TIME_BASED_EFFECT]</div><div class="ttdef"><b>Definition:</b> Project.h:101</div></div>
+<div class="ttc" id="a_project_8h_html_a881b49e3802366255ad852f1c8624fd1"><div class="ttname"><a href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1">GameStatus</a></div><div class="ttdeci">GameStatus</div><div class="ttdef"><b>Definition:</b> Project.h:81</div></div>
+<div class="ttc" id="a_project_8h_html_a881b49e3802366255ad852f1c8624fd1a0b609bd9cce2b38f3f76f23e0a3ff372"><div class="ttname"><a href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1a0b609bd9cce2b38f3f76f23e0a3ff372">GAME_RESULT_SCREEN</a></div><div class="ttdeci">@ GAME_RESULT_SCREEN</div><div class="ttdef"><b>Definition:</b> Project.h:82</div></div>
+<div class="ttc" id="a_project_8h_html_a881b49e3802366255ad852f1c8624fd1a9873e16bc1530dedb416060abbeea6d0"><div class="ttname"><a href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1a9873e16bc1530dedb416060abbeea6d0">GAME_SCREEN</a></div><div class="ttdeci">@ GAME_SCREEN</div><div class="ttdef"><b>Definition:</b> Project.h:82</div></div>
+<div class="ttc" id="a_project_8h_html_a881b49e3802366255ad852f1c8624fd1aa8837eaf5f57386a2cd20e077fb840bf"><div class="ttname"><a href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1aa8837eaf5f57386a2cd20e077fb840bf">MAIN_SCREEN</a></div><div class="ttdeci">@ MAIN_SCREEN</div><div class="ttdef"><b>Definition:</b> Project.h:82</div></div>
+<div class="ttc" id="a_project_8h_html_a881b49e3802366255ad852f1c8624fd1abd7d37072d896d1b5a71c239cdf22050"><div class="ttname"><a href="_project_8h.html#a881b49e3802366255ad852f1c8624fd1abd7d37072d896d1b5a71c239cdf22050">SELECT_MUSIC_SCREEN</a></div><div class="ttdeci">@ SELECT_MUSIC_SCREEN</div><div class="ttdef"><b>Definition:</b> Project.h:82</div></div>
+<div class="ttc" id="a_project_8h_html_a8d092d8cc82de0e6db5e37abb4b86fad"><div class="ttname"><a href="_project_8h.html#a8d092d8cc82de0e6db5e37abb4b86fad">NUM_OF_TIME_BASED_EFFECT</a></div><div class="ttdeci">#define NUM_OF_TIME_BASED_EFFECT</div><div class="ttdef"><b>Definition:</b> Project.h:100</div></div>
+<div class="ttc" id="a_project_8h_html_a9506caa20f6ea0953e4d2d6124e23cd4"><div class="ttname"><a href="_project_8h.html#a9506caa20f6ea0953e4d2d6124e23cd4">isHit</a></div><div class="ttdeci">boolean isHit</div><div class="ttdef"><b>Definition:</b> Project.h:90</div></div>
+<div class="ttc" id="a_project_8h_html_a959fbfc26c1b74d4c3e938994113f9ab"><div class="ttname"><a href="_project_8h.html#a959fbfc26c1b74d4c3e938994113f9ab">BUTTON1_PIN</a></div><div class="ttdeci">#define BUTTON1_PIN</div><div class="ttdef"><b>Definition:</b> Project.h:27</div></div>
+<div class="ttc" id="a_project_8h_html_a9dffb288f0f2281a0b9abbd8efaa5a18"><div class="ttname"><a href="_project_8h.html#a9dffb288f0f2281a0b9abbd8efaa5a18">score</a></div><div class="ttdeci">unsigned int score</div><div class="ttdef"><b>Definition:</b> Project.h:106</div></div>
+<div class="ttc" id="a_project_8h_html_a9ecdeb50142320b017345861141760cc"><div class="ttname"><a href="_project_8h.html#a9ecdeb50142320b017345861141760cc">message</a></div><div class="ttdeci">char message[MESSAGE_BUFFER_LENGTH]</div><div class="ttdef"><b>Definition:</b> Project.h:110</div></div>
+<div class="ttc" id="a_project_8h_html_aa089015fd4e4e9a305ec946401ad0800"><div class="ttname"><a href="_project_8h.html#aa089015fd4e4e9a305ec946401ad0800">BUTTON_PINS</a></div><div class="ttdeci">const int BUTTON_PINS[]</div><div class="ttdef"><b>Definition:</b> Project.h:39</div></div>
+<div class="ttc" id="a_project_8h_html_aa1c581e80fd401f653a5851c9d4271b1"><div class="ttname"><a href="_project_8h.html#aa1c581e80fd401f653a5851c9d4271b1">messageLen</a></div><div class="ttdeci">int messageLen</div><div class="ttdef"><b>Definition:</b> Project.h:111</div></div>
+<div class="ttc" id="a_project_8h_html_aaa003c626026151d78c0b3921d2b0fe9"><div class="ttname"><a href="_project_8h.html#aaa003c626026151d78c0b3921d2b0fe9">BASE_TIME</a></div><div class="ttdeci">int BASE_TIME</div><div class="ttdef"><b>Definition:</b> Project.h:91</div></div>
+<div class="ttc" id="a_project_8h_html_abe0bb4f409ba54763cab53917d3ef656"><div class="ttname"><a href="_project_8h.html#abe0bb4f409ba54763cab53917d3ef656">isInited</a></div><div class="ttdeci">boolean isInited</div><div class="ttdef"><b>Definition:</b> Project.h:84</div></div>
+<div class="ttc" id="a_project_8h_html_ad06cd1d1e775b653844bb91a63b6d0aa"><div class="ttname"><a href="_project_8h.html#ad06cd1d1e775b653844bb91a63b6d0aa">_delay</a></div><div class="ttdeci">void(* _delay)(unsigned long)</div><div class="ttdef"><b>Definition:</b> Project.h:49</div></div>
+<div class="ttc" id="a_project_8h_html_ad3587921d410f15174403aeb8ae6685c"><div class="ttname"><a href="_project_8h.html#ad3587921d410f15174403aeb8ae6685c">renderer</a></div><div class="ttdeci">RGDotMatrixRenderer renderer((int[]) {A4, A5, 2, 3, 4, 5, 6, 7},(int[]) {10, 10, 11, 11, 12, 12, 13, 13}, A0, A1, A2)</div></div>
+<div class="ttc" id="a_project_8h_html_ad49b17affee8b34c9dc37faf727df466"><div class="ttname"><a href="_project_8h.html#ad49b17affee8b34c9dc37faf727df466">renderImage</a></div><div class="ttdeci">RGDotMatrixImage renderImage</div><div class="ttdef"><b>Definition:</b> Project.h:46</div></div>
+<div class="ttc" id="a_project_8h_html_ad5e536b50b2b2de60c803041a68e01c6"><div class="ttname"><a href="_project_8h.html#ad5e536b50b2b2de60c803041a68e01c6">FONT_NOTE_COLS</a></div><div class="ttdeci">unsigned long long FONT_NOTE_COLS[]</div><div class="ttdef"><b>Definition:</b> Project.h:94</div></div>
+<div class="ttc" id="a_project_8h_html_ad8d0f2535ca20affce17b40fb762f776"><div class="ttname"><a href="_project_8h.html#ad8d0f2535ca20affce17b40fb762f776">BUTTON2_PIN</a></div><div class="ttdeci">#define BUTTON2_PIN</div><div class="ttdef"><b>Definition:</b> Project.h:28</div></div>
+<div class="ttc" id="a_project_8h_html_addee3514c38059935da909d2cf3faf55"><div class="ttname"><a href="_project_8h.html#addee3514c38059935da909d2cf3faf55">initMusicData</a></div><div class="ttdeci">void initMusicData()</div><div class="ttdef"><b>Definition:</b> Project.h:70</div></div>
+<div class="ttc" id="a_project_8h_html_ae21849f57f4acfbbcdb066ab792d9bae"><div class="ttname"><a href="_project_8h.html#ae21849f57f4acfbbcdb066ab792d9bae">FONT_GAME_COLS</a></div><div class="ttdeci">unsigned long long FONT_GAME_COLS[]</div><div class="ttdef"><b>Definition:</b> Project.h:95</div></div>
+<div class="ttc" id="a_project_8h_html_af5e604b3cb03bc47de0f4c195f663af0"><div class="ttname"><a href="_project_8h.html#af5e604b3cb03bc47de0f4c195f663af0">NUM_OF_MUSIC_DATA</a></div><div class="ttdeci">#define NUM_OF_MUSIC_DATA</div><div class="ttdef"><b>Definition:</b> Project.h:13</div></div>
+<div class="ttc" id="a_project_8h_html_af9f42ee5de4ea371b4008ace819aef73"><div class="ttname"><a href="_project_8h.html#af9f42ee5de4ea371b4008ace819aef73">previousStatus</a></div><div class="ttdeci">GameStatus previousStatus</div><div class="ttdef"><b>Definition:</b> Project.h:85</div></div>
+<div class="ttc" id="a_project_8h_html_aff8d9ad44d9020f7646f51ae78439c50"><div class="ttname"><a href="_project_8h.html#aff8d9ad44d9020f7646f51ae78439c50">soundController</a></div><div class="ttdeci">SoundController soundController(9, delayWithCustomHandler)</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_font_8h_html"><div class="ttname"><a href="_r_g_dot_matrix_font_8h.html">RGDotMatrixFont.h</a></div></div>
+<div class="ttc" id="a_r_g_dot_matrix_font_8h_html_a2419af4be36773bc3770aee2072d000a"><div class="ttname"><a href="_r_g_dot_matrix_font_8h.html#a2419af4be36773bc3770aee2072d000a">FONT_GAME_COL3</a></div><div class="ttdeci">#define FONT_GAME_COL3</div><div class="ttdef"><b>Definition:</b> RGDotMatrixFont.h:106</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_font_8h_html_a73c666d39e7b0dffa9704d509afb43cd"><div class="ttname"><a href="_r_g_dot_matrix_font_8h.html#a73c666d39e7b0dffa9704d509afb43cd">FONT_NOTE_COL3</a></div><div class="ttdeci">#define FONT_NOTE_COL3</div><div class="ttdef"><b>Definition:</b> RGDotMatrixFont.h:112</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_font_8h_html_a9cee4f86ed44c7d8fa37d6d83a22b7ff"><div class="ttname"><a href="_r_g_dot_matrix_font_8h.html#a9cee4f86ed44c7d8fa37d6d83a22b7ff">FONT_GAME_COL2</a></div><div class="ttdeci">#define FONT_GAME_COL2</div><div class="ttdef"><b>Definition:</b> RGDotMatrixFont.h:105</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_font_8h_html_aa58119f186f1269f088ccaad3cbdebe8"><div class="ttname"><a href="_r_g_dot_matrix_font_8h.html#aa58119f186f1269f088ccaad3cbdebe8">FONT_GAME_COL1</a></div><div class="ttdeci">#define FONT_GAME_COL1</div><div class="ttdef"><b>Definition:</b> RGDotMatrixFont.h:104</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_font_8h_html_aaefa44a595f171e88adc18d819460c35"><div class="ttname"><a href="_r_g_dot_matrix_font_8h.html#aaefa44a595f171e88adc18d819460c35">FONT_NOTE_COL1</a></div><div class="ttdeci">#define FONT_NOTE_COL1</div><div class="ttdef"><b>Definition:</b> RGDotMatrixFont.h:110</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_font_8h_html_ab34b4a88e9f74be71fa0087301fdbddc"><div class="ttname"><a href="_r_g_dot_matrix_font_8h.html#ab34b4a88e9f74be71fa0087301fdbddc">FONT_GAME_COL4</a></div><div class="ttdeci">#define FONT_GAME_COL4</div><div class="ttdef"><b>Definition:</b> RGDotMatrixFont.h:107</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_font_8h_html_ac0eedc9403fc8c67ae506745b8764b92"><div class="ttname"><a href="_r_g_dot_matrix_font_8h.html#ac0eedc9403fc8c67ae506745b8764b92">FONT_NOTE_COL4</a></div><div class="ttdeci">#define FONT_NOTE_COL4</div><div class="ttdef"><b>Definition:</b> RGDotMatrixFont.h:113</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_font_8h_html_aed6bf88fba733ecf4815f778cca55aa9"><div class="ttname"><a href="_r_g_dot_matrix_font_8h.html#aed6bf88fba733ecf4815f778cca55aa9">FONT_NOTE_COL2</a></div><div class="ttdeci">#define FONT_NOTE_COL2</div><div class="ttdef"><b>Definition:</b> RGDotMatrixFont.h:111</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_renderer_8h_html"><div class="ttname"><a href="_r_g_dot_matrix_renderer_8h.html">RGDotMatrixRenderer.h</a></div></div>
+<div class="ttc" id="a_sound_controller_8h_html"><div class="ttname"><a href="_sound_controller_8h.html">SoundController.h</a></div></div>
+<div class="ttc" id="a_tune_8h_html"><div class="ttname"><a href="_tune_8h.html">Tune.h</a></div></div>
+<div class="ttc" id="aclass_dot_matrix_image_html"><div class="ttname"><a href="class_dot_matrix_image.html">DotMatrixImage</a></div><div class="ttdef"><b>Definition:</b> RGDotMatrixImage.h:36</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_image_html"><div class="ttname"><a href="class_r_g_dot_matrix_image.html">RGDotMatrixImage</a></div><div class="ttdef"><b>Definition:</b> RGDotMatrixImage.h:94</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_renderer_html"><div class="ttname"><a href="class_r_g_dot_matrix_renderer.html">RGDotMatrixRenderer</a></div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:52</div></div>
+<div class="ttc" id="aclass_sound_controller_html"><div class="ttname"><a href="class_sound_controller.html">SoundController</a></div><div class="ttdef"><b>Definition:</b> SoundController.h:169</div></div>
+<div class="ttc" id="astruct_time_based_r_g_dot_matrix_html"><div class="ttname"><a href="struct_time_based_r_g_dot_matrix.html">TimeBasedRGDotMatrix</a></div><div class="ttdef"><b>Definition:</b> Project.h:96</div></div>
+<div class="ttc" id="astruct_time_based_r_g_dot_matrix_html_a949a208fa97b7841d89c16a8486a4f32"><div class="ttname"><a href="struct_time_based_r_g_dot_matrix.html#a949a208fa97b7841d89c16a8486a4f32">TimeBasedRGDotMatrix::image</a></div><div class="ttdeci">RGDotMatrixImage image</div><div class="ttdef"><b>Definition:</b> Project.h:97</div></div>
+<div class="ttc" id="astruct_time_based_r_g_dot_matrix_html_aec3a445af901de6dab5ba34cc38b92e6"><div class="ttname"><a href="struct_time_based_r_g_dot_matrix.html#aec3a445af901de6dab5ba34cc38b92e6">TimeBasedRGDotMatrix::targetTime</a></div><div class="ttdeci">long targetTime</div><div class="ttdef"><b>Definition:</b> Project.h:98</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 : &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Project: src/RGDotMatrixRenderer.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'검색','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">RGDotMatrixRenderer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_r_g_dot_matrix_renderer_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef RGDOTMATRIXRENDERER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define RGDOTMATRIXRENDERER_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_r_g_dot_matrix_const_8h.html">RGDotMatrixConst.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_r_g_dot_matrix_image_8h.html">RGDotMatrixImage.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_r_g_dot_matrix_font_8h.html">RGDotMatrixFont.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="_r_g_dot_matrix_renderer_8h.html#a1b4d32b938e91454ded9b2404280ca5d">   10</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_r_g_dot_matrix_renderer_8h.html#a1b4d32b938e91454ded9b2404280ca5d">generateLeftScrollImage</a>(<a class="code hl_class" href="class_dot_matrix_image.html">DotMatrixImage</a> images[], String text) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">int</span> len = text.length();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">int</span> index = 0;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; len; i++) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> currentFont = <a class="code hl_function" href="_r_g_dot_matrix_font_8h.html#ac4714eb677d5f2e2042e87383dd6855d">toSimpleFont</a>(text.charAt(i));</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> nextFont = <a class="code hl_function" href="_r_g_dot_matrix_font_8h.html#ac4714eb677d5f2e2042e87383dd6855d">toSimpleFont</a>(text.charAt((i + 1) % len));</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> doubleNextFont = <a class="code hl_function" href="_r_g_dot_matrix_font_8h.html#ac4714eb677d5f2e2042e87383dd6855d">toSimpleFont</a>(text.charAt((i + 2) % len));</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_class" href="class_dot_matrix_image.html">DotMatrixImage</a> currentImage = {currentFont};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_class" href="class_dot_matrix_image.html">DotMatrixImage</a> nextImage = {nextFont};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_class" href="class_dot_matrix_image.html">DotMatrixImage</a> doubleNextImage = {doubleNextFont};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        images[index++] = currentImage | nextImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>, 5);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        images[index++] = currentImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5adb45120aafd37a973140edee24708065">LEFT</a>, 1) | nextImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>, 4);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        images[index++] = currentImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5adb45120aafd37a973140edee24708065">LEFT</a>, 2) | nextImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>, 3);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        images[index++] = currentImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5adb45120aafd37a973140edee24708065">LEFT</a>, 3) | nextImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>, 2) | doubleNextImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>, 7);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        images[index++] = nextImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>, 1) | doubleNextImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>, 6);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">return</span> index;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_r_g_dot_matrix_renderer_8h.html#a7c9778f2e81adb3100b2569a13445e4c">   30</a></span><a class="code hl_class" href="class_dot_matrix_image.html">DotMatrixImage</a> <a class="code hl_function" href="_r_g_dot_matrix_renderer_8h.html#a1b4d32b938e91454ded9b2404280ca5d">generateLeftScrollImage</a>(String text, <span class="keywordtype">int</span> frame) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">int</span> charIndex = frame / 5;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">int</span> animateIndex = frame % 5;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">int</span> len = text.length();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> currentFont = <a class="code hl_function" href="_r_g_dot_matrix_font_8h.html#ac4714eb677d5f2e2042e87383dd6855d">toSimpleFont</a>(text.charAt(charIndex));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> nextFont = <a class="code hl_function" href="_r_g_dot_matrix_font_8h.html#ac4714eb677d5f2e2042e87383dd6855d">toSimpleFont</a>(text.charAt((charIndex + 1) % len));</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> doubleNextFont = <a class="code hl_function" href="_r_g_dot_matrix_font_8h.html#ac4714eb677d5f2e2042e87383dd6855d">toSimpleFont</a>(text.charAt((charIndex + 2) % len));</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_class" href="class_dot_matrix_image.html">DotMatrixImage</a> currentImage = {currentFont};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_class" href="class_dot_matrix_image.html">DotMatrixImage</a> nextImage = {nextFont};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="class_dot_matrix_image.html">DotMatrixImage</a> doubleNextImage = {doubleNextFont};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_class" href="class_dot_matrix_image.html">DotMatrixImage</a> result = nextImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>, 5 - animateIndex);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span> (animateIndex &lt; 4) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        result = result | (animateIndex == 0 ? currentImage : currentImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5adb45120aafd37a973140edee24708065">LEFT</a>, animateIndex));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> (animateIndex &gt; 2) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        result = result | doubleNextImage.<a class="code hl_function" href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>, 10 - animateIndex);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_r_g_dot_matrix_renderer.html">   52</a></span><span class="keyword">class </span><a class="code hl_class" href="class_r_g_dot_matrix_renderer.html">RGDotMatrixRenderer</a> {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> shiftRegister(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> data) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        digitalWrite(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a44a2c9793b3f2747e968d241ca1a8061">ST_CP_PIN</a>, LOW);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            digitalWrite(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#acf9441c33311bb063c22ded7cff9efd0">SH_CP_PIN</a>, LOW);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            digitalWrite(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a63a8d4bf18a2fdfe3de9ec8f448e8f34">DS_PIN</a>, (data &amp; (0x80 &gt;&gt; i)) ? HIGH : LOW);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            digitalWrite(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#acf9441c33311bb063c22ded7cff9efd0">SH_CP_PIN</a>, HIGH);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        digitalWrite(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a44a2c9793b3f2747e968d241ca1a8061">ST_CP_PIN</a>, HIGH);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> controlRowPulse(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> data) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        shiftRegister(0x80 &gt;&gt; data);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_r_g_dot_matrix_renderer.html#a63a8d4bf18a2fdfe3de9ec8f448e8f34">   69</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a63a8d4bf18a2fdfe3de9ec8f448e8f34">DS_PIN</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_r_g_dot_matrix_renderer.html#a44a2c9793b3f2747e968d241ca1a8061">   70</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a44a2c9793b3f2747e968d241ca1a8061">ST_CP_PIN</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_r_g_dot_matrix_renderer.html#acf9441c33311bb063c22ded7cff9efd0">   71</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#acf9441c33311bb063c22ded7cff9efd0">SH_CP_PIN</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_r_g_dot_matrix_renderer.html#a4ecf9bfa1ea3a214c333abb7d5ae42b5">   73</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a4ecf9bfa1ea3a214c333abb7d5ae42b5">RED_PINS</a>[<a class="code hl_define" href="_r_g_dot_matrix_const_8h.html#a2bd32349fcbeb6ee86434a65226cba1a">MATRIX_SIZE</a>];</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_r_g_dot_matrix_renderer.html#af86c0e2aa88fe4387d798bf5456e4071">   75</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#af86c0e2aa88fe4387d798bf5456e4071">GREEN_PINS</a>[<a class="code hl_define" href="_r_g_dot_matrix_const_8h.html#a2bd32349fcbeb6ee86434a65226cba1a">MATRIX_SIZE</a>];</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_r_g_dot_matrix_renderer.html#a39200cd0cb624e27459ff2b1b4c8f112">   77</a></span>    <a class="code hl_function" href="class_r_g_dot_matrix_renderer.html#a39200cd0cb624e27459ff2b1b4c8f112">RGDotMatrixRenderer</a>(<span class="keywordtype">int</span> *<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a4ecf9bfa1ea3a214c333abb7d5ae42b5">RED_PINS</a>, <span class="keywordtype">int</span> *<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#af86c0e2aa88fe4387d798bf5456e4071">GREEN_PINS</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a63a8d4bf18a2fdfe3de9ec8f448e8f34">DS_PIN</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a44a2c9793b3f2747e968d241ca1a8061">ST_CP_PIN</a>, <span class="keywordtype">int</span> <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#acf9441c33311bb063c22ded7cff9efd0">SH_CP_PIN</a>) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="_r_g_dot_matrix_const_8h.html#a2bd32349fcbeb6ee86434a65226cba1a">MATRIX_SIZE</a>; i++) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            this-&gt;RED_PINS[i] = <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a4ecf9bfa1ea3a214c333abb7d5ae42b5">RED_PINS</a>[i];</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            this-&gt;GREEN_PINS[i] = <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#af86c0e2aa88fe4387d798bf5456e4071">GREEN_PINS</a>[i];</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        this-&gt;DS_PIN = <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a63a8d4bf18a2fdfe3de9ec8f448e8f34">DS_PIN</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        this-&gt;ST_CP_PIN = <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a44a2c9793b3f2747e968d241ca1a8061">ST_CP_PIN</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        this-&gt;SH_CP_PIN = <a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#acf9441c33311bb063c22ded7cff9efd0">SH_CP_PIN</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    };</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_r_g_dot_matrix_renderer.html#af43b1e32e2d3c7d5087e38b264cb587d">   87</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_r_g_dot_matrix_renderer.html#af43b1e32e2d3c7d5087e38b264cb587d">init</a>() {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="_r_g_dot_matrix_const_8h.html#a2bd32349fcbeb6ee86434a65226cba1a">MATRIX_SIZE</a>; i++) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            pinMode(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a4ecf9bfa1ea3a214c333abb7d5ae42b5">RED_PINS</a>[i], OUTPUT);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            pinMode(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#af86c0e2aa88fe4387d798bf5456e4071">GREEN_PINS</a>[i], OUTPUT);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        pinMode(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a63a8d4bf18a2fdfe3de9ec8f448e8f34">DS_PIN</a>, OUTPUT);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        pinMode(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a44a2c9793b3f2747e968d241ca1a8061">ST_CP_PIN</a>, OUTPUT);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        pinMode(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#acf9441c33311bb063c22ded7cff9efd0">SH_CP_PIN</a>, OUTPUT);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_r_g_dot_matrix_renderer.html#a87db9059f3d1a5dc45168add54c471a7">   97</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_r_g_dot_matrix_renderer.html#a87db9059f3d1a5dc45168add54c471a7">clearAllLED</a>() {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="_r_g_dot_matrix_const_8h.html#a2bd32349fcbeb6ee86434a65226cba1a">MATRIX_SIZE</a>; i++) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_define" href="_r_g_dot_matrix_const_8h.html#a2bd32349fcbeb6ee86434a65226cba1a">MATRIX_SIZE</a>; j++) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                digitalWrite(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a4ecf9bfa1ea3a214c333abb7d5ae42b5">RED_PINS</a>[j], HIGH);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                digitalWrite(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#af86c0e2aa88fe4387d798bf5456e4071">GREEN_PINS</a>[j], HIGH);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                controlRowPulse(i);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_r_g_dot_matrix_renderer.html#a5242303e3b541807eda29c2e0a4fd6be">  107</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_r_g_dot_matrix_renderer.html#a5242303e3b541807eda29c2e0a4fd6be">displayImage</a>(<a class="code hl_class" href="class_r_g_dot_matrix_image.html">RGDotMatrixImage</a> &amp;image, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> illuminance = 0) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = 0; r &lt; <a class="code hl_define" href="_r_g_dot_matrix_const_8h.html#a2bd32349fcbeb6ee86434a65226cba1a">MATRIX_SIZE</a>; r++) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <a class="code hl_class" href="class_r_g_dot_matrix_image.html">RGDotMatrixImage</a> current = image.<a class="code hl_function" href="class_r_g_dot_matrix_image.html#a21f4fb7e2858021fec46ef62f789b9a2">shift</a>(<a class="code hl_enumvalue" href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aba595d8bca8bc5e67c37c0a9d89becfa">UP</a>, r) &amp; 0xFF;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; <a class="code hl_define" href="_r_g_dot_matrix_const_8h.html#a2bd32349fcbeb6ee86434a65226cba1a">MATRIX_SIZE</a>; c++) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                digitalWrite(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a4ecf9bfa1ea3a214c333abb7d5ae42b5">RED_PINS</a>[c], bitRead(current.<a class="code hl_variable" href="class_r_g_dot_matrix_image.html#a0b343a7a9c02c90b0908b4beaa9f3a66">redImage</a>, c) ? LOW : HIGH);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                digitalWrite(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#af86c0e2aa88fe4387d798bf5456e4071">GREEN_PINS</a>[c], bitRead(current.<a class="code hl_variable" href="class_r_g_dot_matrix_image.html#a0565a0e23b84064fffdbec1aa5e9f449">greenImage</a>, c) ? LOW : HIGH);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                controlRowPulse(r);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                delayMicroseconds(illuminance);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                controlRowPulse(-1);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; <a class="code hl_define" href="_r_g_dot_matrix_const_8h.html#a2bd32349fcbeb6ee86434a65226cba1a">MATRIX_SIZE</a>; c++) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                digitalWrite(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#a4ecf9bfa1ea3a214c333abb7d5ae42b5">RED_PINS</a>[c], HIGH); <span class="comment">// LED OFF</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                digitalWrite(<a class="code hl_variable" href="class_r_g_dot_matrix_renderer.html#af86c0e2aa88fe4387d798bf5456e4071">GREEN_PINS</a>[c], HIGH); <span class="comment">// LED OFF</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>};</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_r_g_dot_matrix_const_8h_html"><div class="ttname"><a href="_r_g_dot_matrix_const_8h.html">RGDotMatrixConst.h</a></div></div>
+<div class="ttc" id="a_r_g_dot_matrix_const_8h_html_a2bd32349fcbeb6ee86434a65226cba1a"><div class="ttname"><a href="_r_g_dot_matrix_const_8h.html#a2bd32349fcbeb6ee86434a65226cba1a">MATRIX_SIZE</a></div><div class="ttdeci">#define MATRIX_SIZE</div><div class="ttdef"><b>Definition:</b> RGDotMatrixConst.h:4</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_font_8h_html"><div class="ttname"><a href="_r_g_dot_matrix_font_8h.html">RGDotMatrixFont.h</a></div></div>
+<div class="ttc" id="a_r_g_dot_matrix_font_8h_html_ac4714eb677d5f2e2042e87383dd6855d"><div class="ttname"><a href="_r_g_dot_matrix_font_8h.html#ac4714eb677d5f2e2042e87383dd6855d">toSimpleFont</a></div><div class="ttdeci">unsigned long long toSimpleFont(char ch)</div><div class="ttdef"><b>Definition:</b> RGDotMatrixFont.h:132</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_image_8h_html"><div class="ttname"><a href="_r_g_dot_matrix_image_8h.html">RGDotMatrixImage.h</a></div></div>
+<div class="ttc" id="a_r_g_dot_matrix_image_8h_html_abc1fa267d016d0ebf9b254f0bf913af5aba595d8bca8bc5e67c37c0a9d89becfa"><div class="ttname"><a href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aba595d8bca8bc5e67c37c0a9d89becfa">UP</a></div><div class="ttdeci">@ UP</div><div class="ttdef"><b>Definition:</b> RGDotMatrixImage.h:8</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_image_8h_html_abc1fa267d016d0ebf9b254f0bf913af5adb45120aafd37a973140edee24708065"><div class="ttname"><a href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5adb45120aafd37a973140edee24708065">LEFT</a></div><div class="ttdeci">@ LEFT</div><div class="ttdef"><b>Definition:</b> RGDotMatrixImage.h:8</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_image_8h_html_abc1fa267d016d0ebf9b254f0bf913af5aec8379af7490bb9eaaf579cf17876f38"><div class="ttname"><a href="_r_g_dot_matrix_image_8h.html#abc1fa267d016d0ebf9b254f0bf913af5aec8379af7490bb9eaaf579cf17876f38">RIGHT</a></div><div class="ttdeci">@ RIGHT</div><div class="ttdef"><b>Definition:</b> RGDotMatrixImage.h:8</div></div>
+<div class="ttc" id="a_r_g_dot_matrix_renderer_8h_html_a1b4d32b938e91454ded9b2404280ca5d"><div class="ttname"><a href="_r_g_dot_matrix_renderer_8h.html#a1b4d32b938e91454ded9b2404280ca5d">generateLeftScrollImage</a></div><div class="ttdeci">int generateLeftScrollImage(DotMatrixImage images[], String text)</div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:10</div></div>
+<div class="ttc" id="aclass_dot_matrix_image_html"><div class="ttname"><a href="class_dot_matrix_image.html">DotMatrixImage</a></div><div class="ttdef"><b>Definition:</b> RGDotMatrixImage.h:36</div></div>
+<div class="ttc" id="aclass_dot_matrix_image_html_a6cab0af739329f50fa83f875db9bcf7e"><div class="ttname"><a href="class_dot_matrix_image.html#a6cab0af739329f50fa83f875db9bcf7e">DotMatrixImage::shift</a></div><div class="ttdeci">DotMatrixImage shift(ShiftDirection direction, int shift)</div><div class="ttdef"><b>Definition:</b> RGDotMatrixImage.h:56</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_image_html"><div class="ttname"><a href="class_r_g_dot_matrix_image.html">RGDotMatrixImage</a></div><div class="ttdef"><b>Definition:</b> RGDotMatrixImage.h:94</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_image_html_a0565a0e23b84064fffdbec1aa5e9f449"><div class="ttname"><a href="class_r_g_dot_matrix_image.html#a0565a0e23b84064fffdbec1aa5e9f449">RGDotMatrixImage::greenImage</a></div><div class="ttdeci">unsigned long long greenImage</div><div class="ttdef"><b>Definition:</b> RGDotMatrixImage.h:97</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_image_html_a0b343a7a9c02c90b0908b4beaa9f3a66"><div class="ttname"><a href="class_r_g_dot_matrix_image.html#a0b343a7a9c02c90b0908b4beaa9f3a66">RGDotMatrixImage::redImage</a></div><div class="ttdeci">unsigned long long redImage</div><div class="ttdef"><b>Definition:</b> RGDotMatrixImage.h:96</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_image_html_a21f4fb7e2858021fec46ef62f789b9a2"><div class="ttname"><a href="class_r_g_dot_matrix_image.html#a21f4fb7e2858021fec46ef62f789b9a2">RGDotMatrixImage::shift</a></div><div class="ttdeci">RGDotMatrixImage shift(ShiftDirection direction, int shift)</div><div class="ttdef"><b>Definition:</b> RGDotMatrixImage.h:115</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_renderer_html"><div class="ttname"><a href="class_r_g_dot_matrix_renderer.html">RGDotMatrixRenderer</a></div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:52</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_renderer_html_a39200cd0cb624e27459ff2b1b4c8f112"><div class="ttname"><a href="class_r_g_dot_matrix_renderer.html#a39200cd0cb624e27459ff2b1b4c8f112">RGDotMatrixRenderer::RGDotMatrixRenderer</a></div><div class="ttdeci">RGDotMatrixRenderer(int *RED_PINS, int *GREEN_PINS, int DS_PIN, int ST_CP_PIN, int SH_CP_PIN)</div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:77</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_renderer_html_a44a2c9793b3f2747e968d241ca1a8061"><div class="ttname"><a href="class_r_g_dot_matrix_renderer.html#a44a2c9793b3f2747e968d241ca1a8061">RGDotMatrixRenderer::ST_CP_PIN</a></div><div class="ttdeci">int ST_CP_PIN</div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:70</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_renderer_html_a4ecf9bfa1ea3a214c333abb7d5ae42b5"><div class="ttname"><a href="class_r_g_dot_matrix_renderer.html#a4ecf9bfa1ea3a214c333abb7d5ae42b5">RGDotMatrixRenderer::RED_PINS</a></div><div class="ttdeci">int RED_PINS[MATRIX_SIZE]</div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:73</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_renderer_html_a5242303e3b541807eda29c2e0a4fd6be"><div class="ttname"><a href="class_r_g_dot_matrix_renderer.html#a5242303e3b541807eda29c2e0a4fd6be">RGDotMatrixRenderer::displayImage</a></div><div class="ttdeci">void displayImage(RGDotMatrixImage &amp;image, unsigned int illuminance=0)</div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:107</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_renderer_html_a63a8d4bf18a2fdfe3de9ec8f448e8f34"><div class="ttname"><a href="class_r_g_dot_matrix_renderer.html#a63a8d4bf18a2fdfe3de9ec8f448e8f34">RGDotMatrixRenderer::DS_PIN</a></div><div class="ttdeci">int DS_PIN</div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:69</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_renderer_html_a87db9059f3d1a5dc45168add54c471a7"><div class="ttname"><a href="class_r_g_dot_matrix_renderer.html#a87db9059f3d1a5dc45168add54c471a7">RGDotMatrixRenderer::clearAllLED</a></div><div class="ttdeci">void clearAllLED()</div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:97</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_renderer_html_acf9441c33311bb063c22ded7cff9efd0"><div class="ttname"><a href="class_r_g_dot_matrix_renderer.html#acf9441c33311bb063c22ded7cff9efd0">RGDotMatrixRenderer::SH_CP_PIN</a></div><div class="ttdeci">int SH_CP_PIN</div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:71</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_renderer_html_af43b1e32e2d3c7d5087e38b264cb587d"><div class="ttname"><a href="class_r_g_dot_matrix_renderer.html#af43b1e32e2d3c7d5087e38b264cb587d">RGDotMatrixRenderer::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:87</div></div>
+<div class="ttc" id="aclass_r_g_dot_matrix_renderer_html_af86c0e2aa88fe4387d798bf5456e4071"><div class="ttname"><a href="class_r_g_dot_matrix_renderer.html#af86c0e2aa88fe4387d798bf5456e4071">RGDotMatrixRenderer::GREEN_PINS</a></div><div class="ttdeci">int GREEN_PINS[MATRIX_SIZE]</div><div class="ttdef"><b>Definition:</b> RGDotMatrixRenderer.h:75</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 : &#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>
