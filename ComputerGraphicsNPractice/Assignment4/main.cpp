@@ -1,103 +1,186 @@
 #include <GL/glut.h>
-#include <GL/gl.h>
-#include <GL/glu.h>
-#include "name.h"
-// 이름 이미지가 배열로 선언된 헤더 파일
-
-#define TIMER_TICK 30
-// timer 함수 호출 주기
-#define RECT_SIZE 0.0035f
-// 브러시로 사용할 기준 사각형 크기
-#define SCREEN_SIZE 900
-// 창 크기
-#define glVertexP2D(p2d) glVertex3f((p2d).x, (p2d).y, 0)
-// Point2D 구조체를 이용해 GL 정점을 그리는 매크로
+#include "name.hpp"
+#include "sierpinski_gasket.hpp"
+#include "main.h"
 
 /**
- * 2차원 좌표를 다루는 구조체
+ * 메뉴 변경시 호출되는 콜백
+ * @param id 메뉴 ID
  */
-struct Point2D {
-    float x;
-    float y;
-} typedef Point2D;
+void handleMenu(int id) {
+    currentMenu = (Menu) id;
+    if (currentMenu == MENU_EXIT) {
+        exit(0);
+    } else {
+        isAutoUpdateMode = false;
+    }
 
-/**
- * 주어진 중심 좌표에 주어진 변 크기를 가지는 정사각형을 그려주는 함수
- * @param center 중심 좌표
- * @param edgeSize 변 크기
- */
-void drawRect(Point2D center, float edgeSize) {
-    edgeSize /= 2;
-    Point2D v1 = {center.x - edgeSize, center.y - edgeSize};
-    Point2D v2 = {center.x + edgeSize, center.y - edgeSize};
-    Point2D v3 = {center.x + edgeSize, center.y + edgeSize};
-    Point2D v4 = {center.x - edgeSize, center.y + edgeSize};
-
-    glBegin(GL_QUADS);
-    glVertexP2D(v1);
-    glVertexP2D(v2);
-    glVertexP2D(v3);
-    glVertexP2D(v4);
-    glEnd();
+    glutPostRedisplay();
 }
 
 /**
- * 내 이름을 화면에 그리는 함수
+ * 메뉴 초기화 함수
  */
-void drawMyName() {
-    const float startX = -RECT_SIZE * NAME_WIDTH / 2;
-    const float startY = RECT_SIZE * NAME_HEIGHT / 2;
-    for (int i = 0; i < NAME_SIZE; i++) {
-        drawRect({startX + RECT_SIZE * NAME[i][0], startY + -RECT_SIZE * NAME[i][1]}, RECT_SIZE);
+void initMenu() {
+    GLint MyMainMenuID = glutCreateMenu(handleMenu);
+    glutAddMenuEntry("Draw WireCube", MENU_WIRE_CUBE);
+    glutAddMenuEntry("Draw WireSphere", MENU_WIRE_SPHERE);
+    glutAddMenuEntry("Draw WireCone", MENU_WIRE_CONE);
+    glutAddMenuEntry("Draw WireTorus", MENU_WIRE_TORUS);
+    glutAddMenuEntry("Draw WireTetrahedron", MENU_WIRE_TETRAHEDRON);
+    glutAddMenuEntry("Draw WireTeapot", MENU_WIRE_TEAPOT);
+    glutAddMenuEntry("Draw MyName", MENU_MY_NAME);
+    glutAddMenuEntry("Draw SierpinskiGasket", MENU_SIERPINSKI_GASKET);
+    glutAddMenuEntry("Exit", MENU_EXIT);
+    glutAttachMenu(GLUT_RIGHT_BUTTON);
+}
+
+/**
+ * 주어진 메뉴에 맞는 도형을 그리는 함수
+ */
+void draw() {
+    switch (currentMenu) {
+        case MENU_WIRE_CUBE:
+            glutWireCube(1.0);
+            break;
+        case MENU_WIRE_SPHERE:
+            glutWireSphere(0.9, 20, 20);
+            break;
+        case MENU_WIRE_CONE:
+            glutWireCone(1.0, 1.0, 20, 20);
+            break;
+        case MENU_WIRE_TORUS:
+            glutWireTorus(0.1, 0.75, 20, 20);
+            break;
+        case MENU_WIRE_TETRAHEDRON:
+            glutWireTetrahedron();
+            break;
+        case MENU_WIRE_ICOSAHEDRON:
+            glutWireIcosahedron();
+            break;
+        case MENU_WIRE_TEAPOT:
+            glutWireTeapot(0.5);
+            break;
+        case MENU_MY_NAME:
+            drawMyName();
+            break;
+        case MENU_SIERPINSKI_GASKET:
+            drawSierpinski({0, -0.2}, 1.75);
+            break;
     }
 }
 
-void MyDisplay() {
-    drawMyName();
+/**
+ * 디스플레이 콜백
+ */
+void display() {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    draw();
     glFlush();
 }
 
-float color[3] = {0.1f, 0.3f, 0.1f};
-bool increaseGreen = true;
-
 /**
- * 색깔 그라데이션을 계산하여 적용하는 함수
+ * 창 크기 변경시 호출되는 콜백
  */
-void applyGradation() {
-    if (color[1] <= 0.3f) {
-        increaseGreen = true;
-    } else if (color[1] >= 1) {
-        increaseGreen = false;
-    }
-    color[1] += (increaseGreen ? 1 : -1) * 0.01f;
-    glColor3f(color[0], color[1], color[2]);
+void reshape(int width, int height) {
+    glViewport(0, 0, width, height);
+
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+
+    glOrtho(-width / (double) SCREEN_SIZE,
+            width / (double) SCREEN_SIZE,
+            -height / (double) SCREEN_SIZE,
+            height / (double) SCREEN_SIZE, -1, 1);
+
+    glMatrixMode(GL_MODELVIEW);
+
+    glutPostRedisplay();
 }
 
 /**
- * TIMER_TICK 주기로 호출되며, 그라데이션 적용과, 화면 갱신을 처리하는 함수
+ * 마우스 클릭시 호출되는 콜백
+ * @param button 클릭한 버튼
+ * @param state 상태
+ * @param x 가로 좌표
+ * @param y 세로 좌표
+ */
+void mouseClick(int button, int state, int x, int y) {
+    if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
+        prevLocation = {x, y};
+    }
+}
+
+/**
+ * 마우스 모션시 호출되는 콜백
+ * @param x 가로 좌표
+ * @param y 세로 좌표
+ */
+void mouseMotion(GLint x, GLint y) {
+    glRotated(x - prevLocation.x, 0, 1, 0);
+    glRotated(y - prevLocation.y, 1, 0, 0);
+    prevLocation = {x, y};
+}
+
+/**
+ * 키보드 사용시 호출되는 콜백
+ * @param key 누른 키
+ * @param x 마우스 가로 좌표
+ * @param y 마우스 세로 좌표
+ */
+void keyboard(unsigned char key, int x, int y) {
+    if ('0' <= key && key < '0' + MENU_EXIT) {
+        isAutoUpdateMode = false;
+        currentMenu = (Menu) (key - '0');
+    } else if (key == 'a') {
+        isAutoUpdateMode = !isAutoUpdateMode;
+    } else if (key == 'i') {
+        glLoadIdentity();
+    } else if (key == 'q') {
+        exit(0);
+    }
+}
+
+/**
+ * 자동 모드인 경우, 0.5초마다 메뉴 상태를 변경하는 타이머 콜백
  * @param value 타이머 값
  */
-void timer(int value) {
-    applyGradation();
+void updateTimer(int value) {
+    if (isAutoUpdateMode) {
+        currentMenu = (Menu) ((currentMenu + 1) % MENU_EXIT);
+    }
+    glutTimerFunc(AUTO_UPDATE_TICK, updateTimer, 0);
+}
+
+/**
+ * 화면 갱신 및 그라데이션 효과를 적용하는 타이머 콜백
+ * @param value 타이머 값
+ */
+void drawTimer(int value) {
+    if (currentMenu == MENU_MY_NAME) {
+        applyGradation();
+    }
     glutPostRedisplay();
-    glutTimerFunc(TIMER_TICK, timer, 0);
+    glutTimerFunc(DRAW_TICK, drawTimer, 0);
 }
 
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_RGB);
     glutInitWindowSize(SCREEN_SIZE, SCREEN_SIZE);
     glutInitWindowPosition(0, 0);
-
-    glutCreateWindow("3_4 Draw My Name");
+    glutCreateWindow("GLUT"
+                     " Gallery");
+    initMenu();
     glClearColor(0.0, 0.0, 0.0, 1.0);
+    glMatrixMode(GL_MODELVIEW);
 
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
-
-    glutDisplayFunc(MyDisplay);
-    glutTimerFunc(TIMER_TICK, timer, 0);
+    glutDisplayFunc(display);
+    glutReshapeFunc(reshape);
+    glutKeyboardFunc(keyboard);
+    glutMouseFunc(mouseClick);
+    glutMotionFunc(mouseMotion);
+    glutTimerFunc(DRAW_TICK, drawTimer, 0);
+    glutTimerFunc(AUTO_UPDATE_TICK, updateTimer, 0);
     glutMainLoop();
     return 0;
 }
