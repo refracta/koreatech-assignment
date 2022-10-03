@@ -60,7 +60,7 @@ void drawSierpinski(Point2D center, float edgeSize, int limit = 7, int depth = 0
         return;
 
     if (depth == 0) {
-        glColor3f(1, 1, 1);
+        glColor3f(1.0, 1.0, 1.0);
         drawEquilateralTriangle(center, edgeSize);
     }
 

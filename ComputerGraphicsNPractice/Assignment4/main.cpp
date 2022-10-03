@@ -159,6 +159,8 @@ void updateTimer(int value) {
 void drawTimer(int value) {
     if (currentMenu == MENU_MY_NAME) {
         applyGradation();
+    } else {
+        glColor3f(1.0f, 1.0f, 1.0f);
     }
     glutPostRedisplay();
     glutTimerFunc(DRAW_TICK, drawTimer, 0);
