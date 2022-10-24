@@ -19,4 +19,16 @@ public abstract class Beverage {
     }
 
     public abstract int cost();
+
+    public Class<? extends Beverage> getCoffee() {
+        return getClass();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Beverage) || o instanceof CondimentDecorator)
+            return false;
+
+        return this.getCoffee() == ((Beverage) o).getCoffee();
+    }
 }

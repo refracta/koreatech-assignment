@@ -1,5 +1,5 @@
 /**
- * @author 김상진, refracta(2020136110)
+ * @author 김상진, refracta
  * @version 2022년도 2학기
  * @copyright 한국기술교육대학교 컴퓨터공학부 객체지향개발론및실습
  * @file CoffeeTest.java
@@ -37,8 +37,17 @@ public class CoffeeTest {
         beverage3 = new Whip(beverage3);
         System.out.printf("beverage3: %s: %,d원%n", beverage3.getDescription(), beverage3.cost());
 
+        Beverage beverage4 = new HouseBlend();
+        System.out.printf("beverage4: %s: %,d원%n", beverage4.getDescription(), beverage4.cost());
+        Beverage beverage5 = new DarkRoast();
+        System.out.printf("beverage5: %s: %,d원%n", beverage5.getDescription(), beverage5.cost());
+        Beverage beverage6 = new DarkRoast();
+        System.out.printf("beverage6: %s: %,d원%n", beverage5.getDescription(), beverage5.cost());
+
         System.out.println("beverage1.equals(beverage2): " + beverage1.equals(beverage2));
         System.out.println("beverage1.equals(beverage3): " + beverage1.equals(beverage3));
+        System.out.println("beverage4.equals(beverage5): " + beverage4.equals(beverage5));
+        System.out.println("beverage5.equals(beverage6): " + beverage5.equals(beverage6));
 
         try {
             Beverage doubleMilkBeverage = new Milk(beverage3);
