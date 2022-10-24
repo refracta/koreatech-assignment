@@ -40,9 +40,11 @@ void keyboard(unsigned char key, int x, int y) {
     switch (key) {
         case 'l':
             fileName = glkFileDlg(FILTER_ASE);
-            loadedModel.clearAse();
-            loadedModel.readAse(fileName);
-            renderModel = true;
+            if(fileName != NULL) {
+                loadedModel.clearAse();
+                loadedModel.readAse(fileName);
+                renderModel = true;
+            }
             break;
         case 't':
             renderModel = !renderModel;
