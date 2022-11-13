@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * @author 김상진
+ * @author 김상진, refracta
  * @version 2022년도 2학기
  * @copyright 한국기술교육대학교 컴퓨터공학부 객체지향개발론및실습
  * @file CardGame.java

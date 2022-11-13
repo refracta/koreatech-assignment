@@ -37,7 +37,9 @@ public class CardGameView extends Application {
 		gameView.show();
 	}
 	public void closeAllWindows() {
-		gameView.close();
+		if(gameView != null) {
+			gameView.close();
+		}
 	}
 	@Override
 	public void start(Stage primaryStage) throws Exception {
