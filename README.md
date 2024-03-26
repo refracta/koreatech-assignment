@@ -20,7 +20,7 @@ This repository includes computer science assignments I have conducted at KOREAT
 | [ProgrammingLanguages](ProgrammingLanguages)                           | 프로그래밍언어론                                                                                                     | 주영복       | 2022 Spring |
 | [OOPNPractice](OOPNPractice)                                           | 객체지향개발론및실습                                                                                                   | 김상진       | 2022 Fall |
 | [CompilerNPractice](CompilerNPractice)                                 | 컴파일러및실습                                                                                                      | 주영복       | 2022 Fall |
-| [ComputerGraphicsNPractice](ComputerGraphicsNPractice)                 | 컴퓨터그래픽및실습                                                                                                    | 최영규       | 2022 Fall |
+| [ComputerGraphicsNPractice](ComputerGraphicsNPractice)                 | 컴퓨터그래픽스및실습                                                                                                    | 최영규       | 2022 Fall |
 | [MulticoreProgramming](MulticoreProgramming)                           | [멀티코어프로그래밍](https://hpckoreatech.notion.site/Multi-core-Programming-CSE244-41dbf7d37a0b4890ae15529125d5fca7) | 김덕수       | 2023 Spring |
 | [MobileProgramming](MobileProgramming)                                 | 모바일프로그래밍                                                                                                     | 문일영       | 2023 Fall |
 | [RealTimeSystemNPractice](RealTimeSystemNPractice)                     | 실시간시스템및실습                                                                                                    | 주영복       | 2023 Fall |
