@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ch06_Additional_1 - cart</title>
+    <style>
+        header {
+            border-bottom: 1px solid #000;
+        }
+
+        .top-area {
+            display: flex;
+            justify-content: end;
+        }
+
+        .customer-menu {
+            display: inline-flex;
+        }
+
+        .customer-menu a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .btn-search {
+            display: flex;
+            justify-content: end;
+            margin-left: auto;
+        }
+
+        .btn-search > input {
+            border: none;
+            border-bottom: 2px solid black;
+        }
+
+        .main-menu {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .main-menu a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .middle-area {
+            margin-top: 20px
+        }
+
+        .main-logo img {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="top-area">
+        <div class="customer-menu">
+            <a href="register.html">회원가입</a>&nbsp|
+            <a href="login.html">로그인</a>&nbsp|
+            <a href="mypage.html">마이페이지</a>&nbsp|
+            <a href="cart.html" style="font-weight: bold">장바구니</a>&nbsp|
+            <a href="inquery.html">문의하기</a>
+        </div>
+    </div>
+    <div class="middle-area">
+        <div class="main-logo">
+            <a href="main.html"><img src="images/서브시그니처4.jpg"></a>
+        </div>
+        <div class="btn-search">
+            <input type="text" placeholder="검색">
+        </div>
+    </div>
+
+    <div class="main-menu">
+        <a href="#">TOP</a>
+        <a href="#">OUTER</a>
+        <a href="#">PANTS</a>
+        <a href="#">ONEPIECE</a>
+        <a href="#">SKIRT</a>
+        <a href="#">SNEAKERS</a>
+        <a href="#">BAG&SHOES</a>
+        <a href="#">HEADWEAR</a>
+        <a href="#">EYEWEAR</a>
+        <a href="#">ACC</a>
+        <a href="#">BEAUTY</a>
+    </div>
+</header>
+<article>
+    <h1>장바구니 페이지</h1>
+</article>
+</body>
+</html>

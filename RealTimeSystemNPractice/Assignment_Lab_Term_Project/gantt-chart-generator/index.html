@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart Generator</title>
+    <style>
+        .chart-wrapper {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .cpu-labels {
+            margin-top: 30px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        #ganttChartContainer {
+            position: relative;
+            width: 100%;
+            border-top: 1px solid #000;
+        }
+
+        .time-scale {
+            position: absolute;
+            height: 3px;
+            width: 1px;
+            background-color: #ccc;
+        }
+
+        .time-scale.major {
+            height: calc(100% + 10px);
+            background-color: #000;
+            width: 2px;
+        }
+
+        .time-scale-label {
+            position: absolute;
+            bottom: -25px;
+            white-space: nowrap;
+            font-weight: bold;
+            transform: translateX(-50%);
+        }
+
+        .burst {
+            position: absolute;
+            min-width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            line-height: 20px;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+
+        .burst span {
+            display: block;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<h1>Gantt Chart Generator</h1>
+<input type="file" id="fileInput">
+<div class="chart-wrapper">
+    <div class="cpu-labels"></div>
+    <div id="ganttChartContainer"></div>
+</div>
+
+<script>
+    document.getElementById('fileInput').addEventListener('change', function () {
+        generateGanttChart();
+    });
+
+    document.addEventListener('keydown', async (event) => {
+        if (event.ctrlKey && event.key === 'v') {
+            const text = await navigator.clipboard.readText();
+            const data = parseCSV(text);
+            console.log(data);
+            renderGanttChart(data);
+        }
+    });
+
+    function generateGanttChart() {
+        const fileInput = document.getElementById('fileInput');
+        if (!fileInput.files.length) {
+            alert('파일을 업로드하세요.');
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function (event) {
+            const text = event.target.result;
+            const data = parseCSV(text);
+            console.log(data);
+            renderGanttChart(data);
+        };
+        reader.readAsText(fileInput.files[0]);
+    }
+
+    function parseCSV(text) {
+        const lines = text.split('\n').filter(line => line);
+        let startIndex = lines.findIndex(l => l.startsWith('Burst_ID'));
+
+        let keys = lines[startIndex].split(/\s+/).filter(token => token);
+        return lines.slice(startIndex + 1, lines.length).map(line => {
+            const tokens = line.split(/\s+/).filter(token => token);
+            return tokens.reduce((a, c, i) => ({...a, [keys[i]]: c}), {});
+        });
+    }
+
+    function renderGanttChart(data) {
+        const container = document.getElementById('ganttChartContainer');
+        const cpuLabels = document.querySelector('.cpu-labels');
+        container.innerHTML = '';
+        cpuLabels.innerHTML = '';
+
+        const maxTime = Math.max(...data.map(d => d.Finish_Time));
+        const cpuCount = Math.max(...data.map(d => parseInt(d.CPU_ID))) + 1;
+        const scaleInterval = 10;
+
+        for (let i = 0; i < cpuCount; i++) {
+            const label = document.createElement('div');
+            label.textContent = `CPU ${i}`;
+            label.style.height = '25px';
+            label.style.lineHeight = '25px';
+            cpuLabels.appendChild(label);
+        }
+
+        // Render time scales and labels
+        for (let i = 0; i <= maxTime; i++) {
+            const scale = document.createElement('div');
+            scale.classList.add('time-scale');
+            scale.style.left = `${(i / maxTime) * 100}%`;
+
+            if (i % scaleInterval === 0) {
+                scale.classList.add('major');
+                const label = document.createElement('div');
+                label.textContent = i;
+                label.classList.add('time-scale-label');
+                label.style.left = `${(i / maxTime) * 100}%`;
+                container.appendChild(label);
+            }
+
+            container.appendChild(scale);
+        }
+
+        data.forEach(d => {
+            const burst = document.createElement('div');
+            burst.classList.add('burst');
+            burst.innerHTML = `<span>${d.Burst_ID}</span>`;
+            burst.style.left = `${(d.Start_Time / maxTime) * 100}%`;
+            burst.style.width = `${((d.Finish_Time - d.Start_Time) / maxTime) * 100}%`;
+            burst.style.top = `${parseInt(d.CPU_ID) * 25}px`;
+            burst.style.backgroundColor = stringToColor(d.Burst_ID + d.CPU_ID);
+            container.appendChild(burst);
+        });
+    }
+
+    function stringToColor(str) {
+        let hash = 0;
+        for (let i = 0; i < str.length; i++) {
+            hash = str.charCodeAt(i) + ((hash << 7) - hash);
+            hash = hash & hash;
+            hash = Math.abs(hash);
+        }
+        const hue = hash % 360;
+        return `hsl(${hue}, 60%, 50%)`;
+    }
+</script>
+</body>
+</html>

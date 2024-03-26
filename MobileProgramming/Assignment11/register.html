@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ch06_Additional_1 - register</title>
+    <style>
+        header {
+            border-bottom: 1px solid #000;
+        }
+
+        .top-area {
+            display: flex;
+            justify-content: end;
+        }
+
+        .customer-menu {
+            display: inline-flex;
+        }
+
+        .customer-menu a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .btn-search {
+            display: flex;
+            justify-content: end;
+            margin-left: auto;
+        }
+
+        .btn-search > input {
+            border: none;
+            border-bottom: 2px solid black;
+        }
+
+        .main-menu {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .main-menu a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .middle-area {
+            margin-top: 20px
+        }
+
+        .main-logo img {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="top-area">
+        <div class="customer-menu">
+            <a href="register.html" style="font-weight: bold">회원가입</a>&nbsp|
+            <a href="login.html">로그인</a>&nbsp|
+            <a href="mypage.html">마이페이지</a>&nbsp|
+            <a href="cart.html">장바구니</a>&nbsp|
+            <a href="inquery.html">문의하기</a>
+        </div>
+    </div>
+    <div class="middle-area">
+        <div class="main-logo">
+            <a href="main.html"><img src="images/서브시그니처4.jpg"></a>
+        </div>
+        <div class="btn-search">
+            <input type="text" placeholder="검색">
+        </div>
+    </div>
+
+    <div class="main-menu">
+        <a href="#">TOP</a>
+        <a href="#">OUTER</a>
+        <a href="#">PANTS</a>
+        <a href="#">ONEPIECE</a>
+        <a href="#">SKIRT</a>
+        <a href="#">SNEAKERS</a>
+        <a href="#">BAG&SHOES</a>
+        <a href="#">HEADWEAR</a>
+        <a href="#">EYEWEAR</a>
+        <a href="#">ACC</a>
+        <a href="#">BEAUTY</a>
+    </div>
+</header>
+<article>
+    <h1>회원 가입 페이지</h1>
+    <!-- <form action="/signup" method="post"> -->
+    <form method="get">
+        <label for="userid">아이디</label><br>
+        <input type="text" id="userid" name="userid"><br>
+
+        <label for="password">비밀번호</label><br>
+        <input type="password" id="password" name="password"><br>
+
+        <label for="password-confirm">비밀번호 재확인</label><br>
+        <input type="password" id="password-confirm" name="password-confirm"><br><br>
+
+        <label for="name">이름</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="year">생년월일</label><br>
+        <input type="text" id="year" name="year" maxlength="4" placeholder="년(4자)">
+
+        <select id="month" name="month">
+            <option value="none">월</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+
+        <input type="text" id="day" name="day" placeholder="일"><br>
+        <label for="gender">성별:</label><br>
+        <select id="gender" name="gender">
+            <option value="none" selected>선택</option>
+            <option value="male">남자</option>
+            <option value="female">여자</option>
+        </select><br>
+
+        <label for="country-code">본인 확인 이메일<sub>(선택)</sub></label><br>
+        <input type="email" id="email" name="email" placeholder="선택입력"><br><br>
+
+        <label for="country-code">휴대전화</label><br>
+        <select id="country-code" name="country-code">
+            <option value="+82">대한민국 +82</option>
+            <option value="+81">일본 +81</option>
+        </select><br>
+        <input type="text" id="phone" name="phone" placeholder="전화번호 입력">
+        <button type="button" id="verify-button" onclick="javascript:alert(`Your code is ${Math.floor(Math.random() * 1000000)}`)">인증 번호 받기</button><br>
+
+        <input type="text" id="verification-code" name="verification-code" placeholder="인증번호 입력하세요"><br><br>
+        <button type="submit">가입하기</button>
+    </form>
+</article>
+</body>
+</html>

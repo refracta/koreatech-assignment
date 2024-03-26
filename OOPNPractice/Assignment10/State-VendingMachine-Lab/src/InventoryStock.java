@@ -55,7 +55,7 @@ public class InventoryStock {
 	}
 	
 	// 재고가 있는 제품 목록
-	public List<Item> getPurchasbleitems(){
+	public List<Item> getPurchasableItems(){
 		List<Item> items = new ArrayList<>();
 		for(var entry: stock.entrySet()) {
 			if(entry.getValue()>0) items.add(entry.getKey());

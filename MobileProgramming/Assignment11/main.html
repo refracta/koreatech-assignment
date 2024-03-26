@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ch06_Additional_1 - main</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        header {
+            border-bottom: 1px solid #000;
+        }
+
+        .top-area {
+            display: flex;
+            justify-content: end;
+        }
+
+        .customer-menu {
+            display: inline-flex;
+        }
+
+        .customer-menu a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .btn-search {
+            display: flex;
+            justify-content: end;
+            margin-left: auto;
+        }
+
+        .btn-search > input {
+            border: none;
+            border-bottom: 2px solid black;
+        }
+
+        .main-menu {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+
+        .main-menu a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .middle-area {
+            margin-top: 20px
+        }
+
+        .main-logo img {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .company-index {
+            font-family: 'Nanum Gothic', sans-serif;
+            background-color: #d3d3d3;
+        }
+
+        .company-index > h1 {
+            padding: 20px 0 40px 20px;
+            margin-top: 15px;
+            margin-bottom: 0;
+            font-size: 80px;
+            line-height: 150%;
+            font-weight: 500;
+        }
+
+        .image-container {
+            height: 400px;
+            width: calc(100% - 40px);
+            margin: 0.5em 20px;
+            border-radius: 20px;
+            background-position: 50% 50%;
+            background-image: url("./images/fashion.jpg");
+        }
+
+        .goal {
+            margin-bottom: 32px;
+            color: black;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 150%;
+        }
+
+        .explain {
+            color: grey;;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 820px;
+        }
+
+        .company-history > h3 {
+            padding: 40px 20px 40px 20px;
+            margin: 0;
+            font-size: 40px;
+            line-height: 150%;
+            font-weight: 600;
+        }
+
+        .year {
+            margin: 0;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            font-size: 30px;
+            line-height: 100%;
+            font-style: italic;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .history-package {
+            display: flex;
+            padding-top: 4px
+        }
+
+        .month {
+            color: black;
+            font-size: 25px;
+        }
+
+        .history-detail {
+            padding-left: 18px;
+            font-size: 18px;
+            color: black;
+        }
+
+        .footer {
+            margin-top: 20px;
+            background-color: #181818;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="top-area">
+        <div class="customer-menu">
+            <a href="register.html">회원가입</a>&nbsp|
+            <a href="login.html">로그인</a>&nbsp|
+            <a href="mypage.html">마이페이지</a>&nbsp|
+            <a href="cart.html">장바구니</a>&nbsp|
+            <a href="inquery.html">문의하기</a>
+        </div>
+    </div>
+    <div class="middle-area">
+        <div class="main-logo">
+            <a href="./main.html"><img src="images/서브시그니처4.jpg"></a>
+        </div>
+        <div class="btn-search">
+            <input type="text" placeholder="검색">
+        </div>
+    </div>
+
+    <div class="main-menu">
+        <a href="#">TOP</a>
+        <a href="#">OUTER</a>
+        <a href="#">PANTS</a>
+        <a href="#">ONEPIECE</a>
+        <a href="#">SKIRT</a>
+        <a href="#">SNEAKERS</a>
+        <a href="#">BAG&SHOES</a>
+        <a href="#">HEADWEAR</a>
+        <a href="#">EYEWEAR</a>
+        <a href="#">ACC</a>
+        <a href="#">BEAUTY</a>
+    </div>
+</header>
+<section class="section-content">
+    <article class="company-index">
+        <h1>회사 소개</h1>
+        <p class="explain">모든 패션의 중심지, KUT을 소개합니다.</p>
+        <div class="image-container"></div>
+        <p class="goal">KUT는 고객에게 최고의 디자인을 제공하고, <br>
+            입점 브랜드의 발전을 적극적으로 지원하는 것을 주된 목표로 하고 있습니다.</p>
+        <p class="explain">KUT는 2023년에 시작된 국내 패션 정보 공유를 위한 온라인 커뮤니티로 출발했습니다.<br>
+            그 이후, KUT는 회원들이 다양한 브랜드의 정품을 안심하고 구매할 수 있는 패션 쇼핑 서비스인 KUT 스토어를 론칭했습니다.<br><br>
+            스트리트웨어에서부터 캐주얼, 디자이너 브랜드, 컨템포러리 스타일, 그리고 명품에 이르기까지,<br>
+            KUT는 패션에 특화된 맞춤 쇼핑 경험을 제공하며 다양한 스타일과 브랜드의 상품을 선보이고 있습니다.<br>
+        </p>
+    </article>
+    <article class="company-history">
+        <h3>History</h3>
+        <p class="year red">2023</p>
+        <div class="history-package">
+            <span class="month">10월</span><span class="history-detail">패션특화 오피스 오픈</span>
+        </div>
+        <div class="history-package">
+            <span class="month">7월</span><span class="history-detail">첫 가상 현실(VR) 패션 쇼 개최</span>
+        </div>
+        <div class="history-package">
+            <span class="month">5월</span><span class="history-detail">글로벌 온라인 스토어 확장</span>
+        </div>
+        <div class="history-package">
+            <span class="month">2월</span><span class="history-detail">온라인 커뮤니티 회원 수 100만 명 돌파</span>
+        </div>
+        <p class="year">2022</p>
+        <div class="history-package">
+            <span class="month">11월</span><span class="history-detail">증강 현실(AR) 기능 업데이트</span>
+        </div>
+        <div class="history-package">
+            <span class="month">9월</span><span class="history-detail">KUT 패션 위크 개최</span>
+        </div>
+        <div class="history-package">
+            <span class="month">6월</span><span class="history-detail">지속 가능 패션 라인 출시</span>
+        </div>
+        <div class="history-package">
+            <span class="month">4월</span><span class="history-detail">한정판 글로벌 브랜드 컬렉션 출시</span>
+        </div>
+        <div class="history-package">
+            <span class="month">1월</span><span class="history-detail">AI 기반 스타일 추천 시스템 도입</span>
+        </div>
+    </article>
+</section>
+<footer class="footer">
+    패션 웹 커뮤니티 / 최고의 최신 패션 숍 :: WWW.KUT.COM
+</footer>
+
+</body>
+</html>
