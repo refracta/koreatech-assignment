@@ -1,32 +1,164 @@
 # koreatech-assignment
-한국교육기술대학교 과제
+This repository includes computer science assignments I have conducted at KOREATECH.
 
-# 수강 과목 일람
-| 구분                                                                     | 과목명         | 교수  | 수강시점  |
-|------------------------------------------------------------------------|-------------|-----|--------|
-| [CProgramming1](CProgramming1)                                         | C프로그래밍Ⅰ     | 강승우 | 2020-01 |
-| [IntroductionToComputerEngineering](IntroductionToComputerEngineering) | 컴퓨터공학입문     | 윤한경 | 2020-01 |
-| [CProgramming2](CProgramming2)                                         | C프로그래밍Ⅱ     | 김덕수 | 2020-02 |
-| [CppProgramming](CppProgramming)                                       | CPP프로그래밍    | 최영규 | 2021-01 |
-| [DigitalEngineeringNPractice](DigitalEngineeringNPractice)             | 디지털공학및실습    | 이강환 | 2021-01 |
-| [JavaProgramming](JavaProgramming)                                     | 자바프로그래밍     | 김상진 | 2021-02 |
-| [WindowsProgramming](WindowsProgramming)                               | 윈도우즈프로그래밍   | 주영복 | 2021-02 |
-| [DataStructureNPractice](DataStructureNPractice)                       | 자료구조및실습     | 김상진 | 2021-02 |
-| [MicroprocessorNPractice](MicroprocessorNPractice)                     | 마이크로프로세서및실습 | 장경식 | 2021-02 |
-| [WebProgramming](WebProgramming)                                       | 웹프로그래밍      | 문일영 | 2022-01 |
-| [OperatingSystem](OperatingSystem)                                      | 운영체제        | 김덕수 | 2022-01 |
-| [BigDataUtilization](BigDataUtilization)                               | 빅데이터활용      | 이호  | 2022-01 |
-| [AlgorithmNPractice](AlgorithmNPractice)                               | 알고리즘및실습     | 최영규 | 2022-01 |
-| [ProgrammingLanguages](ProgrammingLanguages)                           | 프로그래밍언어론    | 주영복 | 2022-01 |
-| [OOPNPractice](OOPNPractice)                                           | 객체지향개발론및실습  | 김상진 | 2022-02 |
-| [CompilerNPractice](CompilerNPractice)                                 | 컴파일러및실습     | 주영복 | 2022-02 |
-| [ComputerGraphicsNPractice](ComputerGraphicsNPractice)                 | 컴퓨터그래픽및실습   | 최영규 | 2022-02 |
-| [MulticoreProgramming](MulticoreProgramming)                           | 멀티코어프로그래밍   | 김덕수 | 2023-01 |
-| [MobileProgramming](MobileProgramming)                                 | 모바일프로그래밍    | 문일영 | 2023-02 |
-| [RealTimeSystemNPractice](RealTimeSystemNPractice)                     | 실시간시스템및실습   | 주영복 | 2023-02 |
+## List of Courses Taken
+| Category                                                                     | Course (Korean)                                                                                              | Professor | Date    |
+|------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|-----------|---------|
+| [CProgramming1](CProgramming1)                                         | C프로그래밍Ⅰ                                                                                                      | 강승우       | 2020 Spring |
+| [IntroductionToComputerEngineering](IntroductionToComputerEngineering) | 컴퓨터공학입문                                                                                                      | 윤한경       | 2020 Spring |
+| [CProgramming2](CProgramming2)                                         | [C프로그래밍Ⅱ](https://sites.google.com/view/hpclab/courses/c-programming-lv2)                                    | 김덕수       | 2020 Fall |
+| [CppProgramming](CppProgramming)                                       | CPP프로그래밍                                                                                                     | 최영규       | 2021 Spring |
+| [DigitalEngineeringNPractice](DigitalEngineeringNPractice)             | 디지털공학및실습                                                                                                     | 이강환       | 2021 Spring |
+| [JavaProgramming](JavaProgramming)                                     | 자바프로그래밍                                                                                                      | 김상진       | 2021 Fall |
+| [WindowsProgramming](WindowsProgramming)                               | 윈도우즈프로그래밍                                                                                                    | 주영복       | 2021 Fall |
+| [DataStructureNPractice](DataStructureNPractice)                       | 자료구조및실습                                                                                                      | 김상진       | 2021 Fall |
+| [MicroprocessorNPractice](MicroprocessorNPractice)                     | 마이크로프로세서및실습                                                                                                  | 장경식       | 2021 Fall |
+| [WebProgramming](WebProgramming)                                       | 웹프로그래밍                                                                                                       | 문일영       | 2022 Spring |
+| [OperatingSystem](OperatingSystem)                                      | [운영체제](https://hpckoreatech.notion.site/Operating-System-CSE132-2023-b8aa98fe69cc4a8cb950051a04bc35ca)                                                                                                     | 김덕수       | 2022 Spring |
+| [BigDataUtilization](BigDataUtilization)                               | 빅데이터활용                                                                                                       | 이호        | 2022 Spring |
+| [AlgorithmNPractice](AlgorithmNPractice)                               | 알고리즘및실습                                                                                                      | 최영규       | 2022 Spring |
+| [ProgrammingLanguages](ProgrammingLanguages)                           | 프로그래밍언어론                                                                                                     | 주영복       | 2022 Spring |
+| [OOPNPractice](OOPNPractice)                                           | 객체지향개발론및실습                                                                                                   | 김상진       | 2022 Fall |
+| [CompilerNPractice](CompilerNPractice)                                 | 컴파일러및실습                                                                                                      | 주영복       | 2022 Fall |
+| [ComputerGraphicsNPractice](ComputerGraphicsNPractice)                 | 컴퓨터그래픽및실습                                                                                                    | 최영규       | 2022 Fall |
+| [MulticoreProgramming](MulticoreProgramming)                           | [멀티코어프로그래밍](https://hpckoreatech.notion.site/Multi-core-Programming-CSE244-41dbf7d37a0b4890ae15529125d5fca7) | 김덕수       | 2023 Spring |
+| [MobileProgramming](MobileProgramming)                                 | 모바일프로그래밍                                                                                                     | 문일영       | 2023 Fall |
+| [RealTimeSystemNPractice](RealTimeSystemNPractice)                     | 실시간시스템및실습                                                                                                    | 주영복       | 2023 Fall |
 
-# Highlight 과제
+## Highlight Assignments
+Score Category Assignment Description
 
-Highlight Assignments
-★☆☆☆☆ CProgramming1 CProgramming1/Problem3/main.c
-★☆☆☆☆ IntroductionTOComputerEngineering Report on Two's Complement, Gray Code, BCD Code, Hamming Code, and Hangle Code Assignment6
+★☆☆☆☆ 
+CProgramming1 
+[Assignment1 - Problem3](CProgramming1/Assignment1/Problem3) 
+A C program that parses and calculates a given polynomial.
+
+★☆☆☆☆
+IntroductionTOComputerEngineering 
+[Assignment6](IntroductionToComputerEngineering/Assignment6.pdf) 
+Report on Two's Complement, Gray Code, BCD Code, Hamming Code, and Hangul Code.
+
+★★☆☆☆ 
+CProgramming2
+[MyProblem4](CProgramming2/MyProblem4) 
+Tic-Tac-Toe AI using Alpha-Beta Pruning.
+
+★★★☆☆
+CProgramming2 
+[MyProblem5](CProgramming2/MyProblem5)
+[Angle Problem](https://www.youtube.com/watch?v=sxiKlOK3EJY) Simulator
+
+★★★★☆ 
+CProgramming2 
+[TeamSHCD-Omok](https://github.com/refracta/TeamSHCD-Omok) 
+A Gomoku program based on C
+
+★★★☆☆ 
+CppProgramming 
+[Assignment04](CppProgramming/Assignment04.pdf) 
+ASCII art based Fifteen Puzzle
+
+★★★★★ 
+DigitalEngineeringNPractice 
+[Sequential Logic(Application) Study](DigitalEngineeringNPractice/%5BExam2%5D%20Chapter%209%20-%20Sequential%20Logic(Application)%20Study.pdf) 
+Apollo Battery Controller Design (Sequential Logic Controller)
+
+★★★★☆
+DigitalEngineeringNPractice
+[7-Segment Decoder](DigitalEngineeringNPractice/%5BPractice%5D%207-Segment%20Decoder.pdf)
+Report on 7-Segment Decoder Design ([with Overflow/Zero/Negative detection logic](https://github.com/refracta/4bit-overflow-detection))
+
+★☆☆☆☆
+WindowsProgramming
+[Quiz_3_Ch_3](WindowsProgramming/Quiz_3_Ch_3.pdf)
+Report on Bitmap Structure
+
+★★☆☆☆
+DataStructureNPractice
+[Chap09-AVL](DataStructureNPractice/Chap09-AVL)
+AVL Tree Implementation Based on C++
+
+★★★★★
+MicroprocessorNPractice
+[Project](MicroprocessorNPractice/Project.pdf) ([source code](MicroprocessorNPractice))
+4-Key Rhythm Game Based on Arduino (Inspired by [Rhythm Star](https://www.youtube.com/watch?v=ZMurwirTWfw))
+
+★★★★☆
+WebProgramming
+[KOCOM](https://github.com/refracta/kocom)
+KOREATECH COMPUTER COMMUNITY (BBS System)
+
+★★★★★
+OperatingSystem
+[Process-Scheduling-Simulator](https://github.com/refracta/Process-Scheduling-Simulator)
+Graphical CPU Scheduling Simulator Based on JavaFX
+
+★★★★★
+BigDataUtilization
+[Big Data Analysis Case Study - Lane Recognition in Autonomous Vehicles](BigDataUtilization/Big%20Data%20Analysis%20Case%20Study%20-%20Lane%20Recognition%20in%20Autonomous%20Vehicles.pdf)
+A report investigating the past and present of lane recognition issues, and conducting a SWOT analysis.
+
+★★☆☆☆
+AlgorithmNPractice
+[PracticeAssignment04](AlgorithmNPractice/PracticeAssignment04.ipynb)
+Brute Force Algorithm Practice and Creation and Determination of Bipartite Graphs
+
+★★★☆☆
+AlgorithmNPractice
+[PracticeAssignment12](AlgorithmNPractice/PracticeAssignment12.ipynb)
+Prim and Kruskal's Spanning Tree Algorithms, N-Queen Problem, and Graph Coloring Problem
+
+★★☆☆☆
+ProgrammingLanguages
+[Assignment_5](ProgrammingLanguages/Assignment_5.pdf)
+A report on solving problems related to mixed-mode arithmetic expressions, overloaded operators, assigning operations, single-operand assignment forms, and BNF, including a summary of the paper "A Genealogy of Control Structures" by Henry F. Ledgard and Michael Marcotty
+
+★★☆☆☆
+OOPNPractice
+[Assignment_5](OOPNPractice/Assignment10)
+Vending Machine Application Designed Using the State Pattern
+
+★★★☆☆
+CompilerNPractice
+[Theory Assignment1](CompilerNPractice/%5BTheory%5D%20Assignment1.pdf)
+A analysis report on the functions of compilers and interpreters, characteristics and optimization of the compilation process, and methods of programming language processing.
+
+★★★☆☆
+ComputerGraphicsNPractice
+[Assignment_07](ComputerGraphicsNPractice/Assignment_07.pdf) ([source code](ComputerGraphicsNPractice/Assignment7))
+OpenGL-based robot character animation rendering program using coordinate transformation and perspective projection
+
+★★★☆☆
+ComputerGraphicsNPractice
+[Assignment_09](ComputerGraphicsNPractice/Assignment_09.pdf) ([source code](ComputerGraphicsNPractice/Assignment9))
+OpenGL-based line clipping algorithm visualizer (Cohen-Sutherland Algorithm, Liang-Barsky Algorithm)
+
+★★★☆☆
+ComputerGraphicsNPractice
+[Assignment_10](ComputerGraphicsNPractice/Assignment_10.pdf) ([source code](ComputerGraphicsNPractice/Assignment10))
+OpenGL-based rasterization algorithm visualizer (Bresenham's Line Algorithm, Midpoint Circle Algorithm)
+
+★★★☆☆
+MulticoreProgramming
+[Assignment2](MulticoreProgramming/Assignment2)
+Report on the parallelization and performance analysis of matrix multiplication and trapezoidal numerical integration algorithms (OpenMP)
+
+★★★★☆
+MulticoreProgramming
+[Assignment6](MulticoreProgramming/Assignment6)
+Report on performance improvement and optimization of matrix multiplication algorithms using shared memory (CUDA)
+
+★★★★★
+MulticoreProgramming
+[Multi-Segmentor](https://github.com/refracta/Multi-Segmenter)
+3D segmentation tool accelerated using CUDA and OpenMP
+
+★★★★★
+MobileProgramming
+[hoodadak](https://github.com/refracta/hoodadak)
+WebRTC based Fast and lightweight direct messenger
+
+★★☆☆☆
+RealTimeSystemNPractice
+[Assignment_5](RealTimeSystemNPractice/Assignment_Lab_Term_Project.pdf) ([source code](RealTimeSystemNPractice/Assignment_Lab_Term_Project))
+A report on the implementation and performance experiments of process scheduling algorithms using single queue and multi-queue methods
