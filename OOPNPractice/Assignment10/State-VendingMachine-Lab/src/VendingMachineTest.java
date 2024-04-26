@@ -6,6 +6,10 @@ import org.junit.jupiter.api.Test;
 class VendingMachineTest {
     public static final boolean isJUnitTest = isJUnitTest();
 
+    /**
+     * 런타임 환경이 JUnit인지의 여부를 반환한다.
+     * @return 런타임 환경이 JUnit인지에 대한 여부
+     */
     private static boolean isJUnitTest() {
         try {
             new Image("cider.jpg");
@@ -16,16 +20,7 @@ class VendingMachineTest {
         }
         return false;
     }
-    @Test
-    void cashRegisterTest() throws ChangeNotAvailableException {
-        CashRegister cashRegister = new CashRegister();
-        cashRegister.add(Currency.P10000, 2);
-        cashRegister.add(Currency.C100, 1);
-        cashRegister.add(Currency.C50, 3);
-        cashRegister.debugPrint();
-        CashRegister change = cashRegister.getChange(200);
-        change.debugPrint();
-    }
+
     @Test
     void normalExecutionTest01() throws ChangeNotAvailableException {
         VendingMachine vMachine = new VendingMachine();
@@ -48,11 +43,16 @@ class VendingMachineTest {
         vMachine.selectItem(Item.Cider);
         assertEquals(vMachine.getNumberOfItems(Item.Cider), 2);
         assertEquals(vMachine.getBalance(), 10_500);
+
+        boolean isThrowException = false;
         try {
             vMachine.selectItem(Item.Cola);
         } catch (ChangeNotAvailableException e) {
+            isThrowException = true;
             assertTrue(e.changeReturned);
         }
+        assertTrue(isThrowException);
+        // 예외가 일어나지 않는 경우도 확인하기 위해 사용
         assertEquals(vMachine.getNumberOfItems(Item.Cola), 1);
         assertEquals(vMachine.getAmount(Currency.C100), 6);
         assertEquals(vMachine.getBalance(), 10_100);

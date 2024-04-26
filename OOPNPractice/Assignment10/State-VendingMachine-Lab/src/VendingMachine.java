@@ -10,13 +10,18 @@ public class VendingMachine {
     // 자판기가 보유하고 있는 돈 정보 (고객이 투입한 돈도 포함)
     private CashRegister cashRegister = new CashRegister();
     private CashRegister userCashRegister = new CashRegister(); // 고객이 투입한 돈 정보
-    private VendingMachineState currentState;
+    private VendingMachineState currentState = VendingMachineState.SOLD_OUT;
+    // 자판기 상태
+    private Item dispenseItem;
 
     public VendingMachineState getCurrentState() {
         return currentState;
     }
 
     public void changeState(VendingMachineState currentState) {
+        if(this.currentState == VendingMachineState.DISPENSE && currentState != VendingMachineState.DISPENSE){
+            this.currentState.dispenseItem(dispenseItem);
+        }
         this.currentState = currentState;
     }
 
@@ -31,17 +36,17 @@ public class VendingMachine {
 
     // 상태 변화가 필요할 수 있음
     public void clearItems() {
-        inventoryStock.clear();
+        currentState.clearItems(this, inventoryStock);
     }
 
     // 상태 변화가 필요할 수 있음
     public void setItems(Item item, int amount) {
-        inventoryStock.setItem(item, amount);
+        currentState.setItems(this, inventoryStock, item, amount);
     }
 
     // 상태 변화가 필요할 수 있음
     public void removeItem(Item item) {
-        inventoryStock.removeItem(item);
+        currentState.removeItem(this, inventoryStock, item);
     }
 
     // cashRegister 상호작용
@@ -66,6 +71,14 @@ public class VendingMachine {
         userCashRegister = changeRegister;
     }
 
+    public Item getDispenseItem() {
+        return dispenseItem;
+    }
+
+    public void setDispenseItem(Item dispenseItem) {
+        this.dispenseItem = dispenseItem;
+    }
+
     // 실제 투입된 돈을 처리하는 메소드
     // 고객이 투입한 돈은 자판기 보유 돈에도 포함하여 처리함
     public void addCash(Currency currency, int amount) {
@@ -75,31 +88,16 @@ public class VendingMachine {
 
     // vendingMachine 자체와 상호작용
     public void insertCash(Currency currency, int amount) {
-        if (!inventoryStock.getPurchasbleitems().isEmpty()) {
-            addCash(currency, amount);
-        }
+        currentState.insertCash(this, currency, amount);
     }
 
     public void selectItem(Item item) throws ChangeNotAvailableException {
-        int changeAmount = userCashRegister.getBalance() - item.price;
-        CashRegister changeRegister = getChange(changeAmount);
-        if (changeRegister.getBalance() != changeAmount) {
-            boolean canBuyAnyItem = canBuyAnyItem();
-            if (!canBuyAnyItem) {
-                cancel();
-            }
-            throw new ChangeNotAvailableException(!canBuyAnyItem);
-        } else {
-            inventoryStock.setItem(item, inventoryStock.getNumberOfItems(item) - 1);
-            userCashRegister = changeRegister;
-            if (!canBuyAnyItem()) {
-                cancel();
-            }
-        }
+       currentState.checkChange(this, item);
+       currentState.selectItem(this, item);
     }
 
     public void cancel() {
-        returnChange();
+        currentState.cancel(this);
     }
 
     // 거스름 처리
@@ -128,7 +126,7 @@ public class VendingMachine {
 
     // 구입할 수 있는 것이 있는지 여부를 알려줌
     boolean canBuyAnyItem() {
-        for (var item : inventoryStock.getPurchasbleitems())
+        for (var item : inventoryStock.getPurchasableItems())
             if (canBuyItem(item)) return true;
         return false;
     }
